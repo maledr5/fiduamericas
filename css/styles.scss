@@ -11,7 +11,7 @@
 .paint-row {
 	background-color: red;
 	opacity: 0.3;
-	height: 100px;
+	height: 1000px;
 	border: solid 1px white;
 	z-index: 10;
 	display: flex;
@@ -88,40 +88,6 @@ body {
 }
 
 
-
-// COPY BORDER BOX
-#nos-banner .border-box {
-	position: relative;
-	bottom: 100px;
-}
-
-.box-grey {
-	border-color: $grey;
-	color: $grey;
-}
-
-.box-blue {
-	border-color: $sec-color;
-	color: $white;
-}
-
-.copy-box {
-    font-size: 1.2em;
-    text-transform: uppercase;
-    width: 100%;
-    height: auto;
-    padding: 25px;
-    line-height: 1.7em;
-    text-align: right;
-    letter-spacing: 0.1em;
-}
-
-.light-grey {
-	background-color: $light-grey;
-}
-
-.button-border-box {}
-
 // SECTION - Nosotros
 // ==========================================================================
 
@@ -136,6 +102,7 @@ body {
 
 #nos-phrases {
 	margin-bottom: 20px;
+    margin-left: -10px;
 
 	.border-box {
 		margin-bottom: 100px;
@@ -169,9 +136,6 @@ body {
 	z-index: 1;
 }
 
-// .nos-quote p {
-// }
-
 .nos-quote p.main {
 	flex-basis: 500px;
 }
@@ -197,7 +161,7 @@ body {
 	}
 	.nos-quote {
 		width: 500px;
-		background-color: #f9f9f9;
+		background-color: $light-bg-grey;
 		@include justify-content(flex-start);
 	}
 	.nos-quote p.second {
@@ -222,6 +186,87 @@ body {
 		height: 480px;
 	}
 }
+
+// SECTION - Fideicomisos
+// ==========================================================================
+
+#fid-banner {
+	background-color: $light-grey;
+	padding: 40px 80px;
+}
+
+#fid-info {
+	position: relative;
+	hyphens: auto;
+
+	.border-box {
+		margin-top: -30px;
+		@include flex-direction(column);
+		z-index: 1;
+	}
+
+	#fid-info-element {
+		background-color: $white;
+		border: 1px solid $light-grey;
+		width: 100%;
+		height: 410px;
+		padding: 18px;
+	}
+
+	.fiduciaria {
+		position: absolute;
+	    width: 650px;
+	    top: 330px;
+	    left: calc(50% - 325px);
+	}
+
+	.fiduciaria_bg {
+		height: 130px;
+	}
+
+	.fid-info-small {
+		display: none;
+	}
+
+	@media #{$medium-and-down} {
+		.fiduciaria {
+		    position: absolute;
+		    width: 500px;
+		    top: 330px;
+		    left: calc(50% - 250px);
+		}
+	}
+
+	@media #{$small-and-down} {
+		#fid-info-element {
+			height: 430px;
+		}
+		.fiduciaria {
+			display: none;
+		}
+		.border-box {
+			margin-top: 20px;
+		}
+		.fiduciaria_bg {
+			background-image: url('../images/fiduciaria_small.svg');
+			background-repeat: no-repeat;
+			height: 120px;
+			width: 100%;
+		}
+		.fid-info-small {
+		    background-image: url(../images/fideicomiso_info.svg);
+		    background-repeat: no-repeat;
+		    height: 475px;
+		    width: 300px;
+		    display: block;
+		    margin-left: calc(50% - 150px);
+		    margin-bottom: 40px;
+		}
+	}
+
+}
+
+
 
 
 // 1. Generic
@@ -654,6 +699,19 @@ a.main-link:active {
     margin-bottom: 20px;
 }
 
+a.second-link {
+	border: 1px solid $main-color;
+	color: $main-color;
+	padding: 15px!important;
+	width: 100%;
+	transition: all 0.3s;
+}
+
+a.second-link:hover {
+	background-color: $main-color;
+	color: $white;
+}
+
 
 // 2. CTAs
 // ==========================================================================
@@ -710,3 +768,45 @@ input:-webkit-autofill {
 .material-icons.icon-main {
 	color: $main-color;
 }
+
+
+
+
+// COPY BORDER BOX
+#nos-banner .border-box {
+	position: relative;
+	bottom: 100px;
+}
+
+.box-dark {
+	border-color: $grey;
+	color: $grey;
+}
+
+.box-light-grey {
+	border-color: $light-grey;
+}
+
+.box-main {
+	border-color: $main-color;
+}
+
+.box-light {
+	border-color: $white;
+}
+
+.copy-box {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    line-height: 1.7em;
+    text-align: right;
+    letter-spacing: 0.1em;
+}
+
+.light-grey {
+	background-color: $light-grey;
+}
+
