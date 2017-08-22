@@ -2,3 +2,6 @@
 
 website/
 HORAS.txt
+node_modules
+src/client/public/*.*
+.sass-cache/

@@ -1,0 +1,513 @@
+
+
+html { overflow-x: hidden; }
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+	font-family: $font-main;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+}
+
+body {
+	font-size: 1.1em;
+    line-height: 1.8;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+	font-size: 1em;
+    line-height: 1.8;
+}
+
+// x. General styles
+// ==========================================================================
+
+
+.block-display {
+	display: block;
+}
+
+.center-text {
+	text-align: center;
+}
+
+h1, h2, h3, h4, h5 {
+	font-weight: 400;
+}
+
+h1 {
+	font-family: $font-second;
+	font-size: 2.5em;
+	margin: 20px 0;
+}
+
+h2 {
+	font-family: $font-second;
+	font-size: 2em;
+}
+
+h3 {
+	font-family: $font-second;
+	font-size: 1.2em;
+}
+
+h4 {
+	font-family: $font-main;
+	font-size: 1.3em;
+}
+
+h5 {
+	font-family: $font-main;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	margin: 20px;
+}
+
+@media #{$small-and-down} {
+	h5 {font-size: 1.8em;}
+}
+
+p {
+	font-family: $font-main;
+}
+
+p.main {
+	font-size: 1.5em;
+	line-height: 2em;
+}
+
+p.second {
+	font-size: 1.2em;
+	line-height: 1.8em;
+}
+
+p.normal {
+	font-size: 1em;
+}
+
+@media #{$small-and-down} {
+	p.main {font-size: 1.3em; line-height: 1.8em;}
+	p.second {font-size: 1.1em; line-height: 1.5em;}
+}
+
+.text-light {
+	color: $white;
+}
+
+.text-dark {
+	color: $grey;
+}
+
+.text-main {
+	color: $main-color;
+}
+
+.text-sec {
+	color: $sec-color;
+}
+
+.left { text-align: left; }
+.right { text-align: right; }
+
+.quote-main { background-image: url(../images/quote.svg); }
+.quote-light { background-image: url(../images/quote_light.svg); }
+.quote-dark { background-image: url(../images/quote_dark.svg); }
+
+.quote-icon {
+    width: 100px;
+    height: 70px;
+    min-width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 10px;
+}
+
+@media #{$small-and-down} {
+	.quote-icon { 
+		margin-right: 0; 
+		min-width: 85px;
+	}
+}
+
+#quote {
+		@extend %flexbox;
+}
+
+.page-header {
+	background-color: $light-grey;
+	padding: 40px 0;
+	margin-bottom: 40px;
+}
+
+.header-division {
+	border-bottom: 2px solid $main-color;
+	width: 83%;
+	margin-bottom: 40px;
+}
+
+@media #{$medium-and-down} { .page-header { padding: 20px 0; } }
+@media #{$small-and-down} { .page-header { padding: 0; } }
+
+// x. To refactor
+// ==========================================================================
+
+.full-screen {
+	width: 100%;
+}
+
+.banner-height {
+	height: 500px;
+}
+
+.banner-second {
+	@extend %flexbox;
+	@include align-items(center);
+	background-image: url("../images/image.png");
+	background-size: cover;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-text {
+	font-size: 1.5em;
+	font-weight: 400;
+	font-style: normal;
+	text-align: center;
+	padding: 0 25%;
+	line-height: 2em;
+}
+
+@media #{$medium-and-down} {
+	.banner-text {
+		padding: 0 15%;
+	}
+	.banner-height {
+		height: 480px;
+	}
+}
+
+@media #{$small-and-down} {
+	.banner-text {
+		font-size: 1.3em;
+		line-height: 1.8em;
+		padding: 0 5%;
+	}
+}
+
+.font-main {
+	font-family: $font-main;
+}
+
+.font-second {
+	font-family: $font-second;
+}
+
+#nos-banner .border-box {
+	position: relative;
+	bottom: 100px;
+}
+
+.box-dark {
+	border-color: $grey;
+	color: $grey;
+}
+
+.box-light-grey {
+	border-color: $light-grey!important;
+}
+
+.box-main {
+	border-color: $main-color;
+}
+
+.box-light {
+	border-color: $white;
+}
+
+.copy-box {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    line-height: 1.7em;
+    text-align: right;
+    letter-spacing: 0.1em;
+}
+
+.light-grey {
+	background-color: $light-grey;
+}
+
+// x. Buttons, Anchors and Submit Elements
+// ==========================================================================
+
+a:-webkit-any-link { text-decoration: none; }
+
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+a,
+input[type=button] {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+footer a,
+input[type=button] {
+	transition: all 0.2s;
+}
+
+a:focus {
+	outline: none;
+}
+
+.active {
+	color: $alternate-color!important;
+}
+
+.button-light,
+input[type=button].input-light,
+input[type=button].input-main {
+	font-size: 1.1em;
+	text-align: center;
+	padding: 10px 10px;
+	margin: 15px 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.button-light,
+input[type=button].input-light {
+	color: $white;
+	border: 1px $white solid;
+	background-color: transparent;
+}
+
+input[type=button].input-main {
+	color: $white;
+	background-color: $main-color;
+	border: none;
+}
+
+.button-light:hover,
+input[type=button]:hover {
+	color: $main-color;
+	background-color: $white;
+}
+
+input[type=button].input-main:hover {
+	color: $white;
+	background-color: $sec-color;
+}
+
+input[type=button] {
+	padding: 8px 10px
+}
+
+a.main-link,
+a.second-link {
+	padding: 15px;
+    width: 100%;
+	transition: all 0.3s;
+	text-align: center;
+	min-width: 250px;
+}
+
+a.main-link {
+	background-color: $sec-color;
+    color: #fff;
+}
+
+a.second-link {
+	color: $main-color;
+	border: 1px solid $main-color;
+    position: relative;
+    bottom: 15px;
+}
+
+@media #{$medium-and-down} {
+	a.main-link, a.second-link { min-width: 180px; }
+}
+
+a.main-link:hover,
+a.second-link:hover {
+	background-color: $main-color;
+}
+
+a.second-link:hover {
+	color: $white
+}
+
+a.main-link:active,
+a.second-link:active {
+	transform: scale(0.9);
+}
+
+a.second-link {
+	border: 1px solid $main-color;
+	color: $main-color;
+	padding: 15px!important;
+	width: 100%;
+	transition: all 0.3s;
+}
+
+a.second-link:hover {
+	background-color: $main-color;
+	color: $white;
+}
+
+.border-box {
+    border: 1px solid;
+    height: auto;
+    display: flex;
+    padding: 5px!important;
+    margin-bottom: 20px;
+}
+
+// 2. CTAs
+// ==========================================================================
+
+#fondos-cta, #home-cta {
+	margin-bottom: 40px;
+	span { margin-top: -40px; }
+}
+
+@media #{$small-and-down} {
+	#fondos-cta span,
+	#home-cta span {
+		margin-top: 40px;
+		margin-bottom: 0px;
+	}
+}
+
+#opciones-cta {
+	margin-top: 75px;
+	margin-bottom: 75px;
+}
+
+#contacto-cta {
+	@extend %flexbox;
+	@include flex-direction(column);
+	padding: 0 10em;
+	margin: 80px 0;
+
+	.actions {
+		@extend %flexbox;
+		@include justify-content(space-around);
+	}
+
+	@media #{$medium-and-down} {
+		padding: 0 2em;
+	}
+
+	@media #{$small-and-down} {
+		margin-top: 40px;
+		.actions {
+			padding: 0 2em;
+			@include flex-direction(column);
+		}
+	}
+}
+
+
+// x. Form Elements
+// ==========================================================================
+
+@mixin placeholder($selector, $color) {
+  #{$selector}::-webkit-input-placeholder {color: $color}
+  #{$selector}::-moz-placeholder          {color: $color}
+  #{$selector}:-moz-placeholder           {color: $color}
+  #{$selector}:-ms-input-placeholder      {color: $color}
+}
+
+select {
+    background-color: $white;
+    border-color: $main-color;
+    height: 48px;
+    margin: 7px 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    -moz-appearance: none;
+    -moz-border-radius: 0px;
+    -mox-box-shadow: none;
+}
+
+input[type=text].input-light,
+textarea.input-light {
+	background-color: $main-opacity;
+	color: $white;
+	border: 0;
+}
+
+input[type=text].input-main,
+textarea.input-main,
+select.input-main {
+	color: $main-color;
+	border: 1px solid $main-color;
+}
+
+
+input[type=text].input-main,
+input[type=text].input-light,
+textarea.input-light,
+textarea.input-main {
+	font-size: 1.1em;
+	text-align: left;
+	padding: 7px 0px 7px 20px;
+	margin: 7px 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+@include placeholder('input', #9ebeda);
+@include placeholder('textarea', #9ebeda);
+
+
+input:focus,
+textarea:focus,
+select:focus {
+	outline: none;
+	-mox-box-shadow: none;
+}
+
+select:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 #0057a2;
+	outline: none;
+}
+
+select:-moz-focus-inner {
+	border: none;
+}
+
+/* Change the yellow of autofill to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+.material-icons.icon-light {
+	color: $white;
+}
+
+.material-icons.icon-main {
+	color: $main-color;
+}

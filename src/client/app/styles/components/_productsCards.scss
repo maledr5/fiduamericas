@@ -1,0 +1,28 @@
+
+// ==========================================================================
+// Products Cards
+// ==========================================================================
+
+.product-container {
+    border: 1px solid;
+    margin: 30px 50px 20px 0px;
+    padding: 1.3em 1.3em;
+    flex-basis: 400px;
+
+	* { margin: 0; }
+	h4 { margin-bottom: 20px; }
+}
+
+@media #{$medium-and-down} {
+	.product-container {
+	    margin: 15px 30px 15px 0px;
+	    flex-basis: 310px;
+	}
+}
+
+@media #{$small-and-down} {
+	.product-container {
+	    margin: 15px 0px;
+	    flex-basis: 310px;
+	}
+}

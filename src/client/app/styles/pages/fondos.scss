@@ -1,0 +1,129 @@
+
+// ==========================================================================
+// Fondos
+// ==========================================================================
+
+#fondos {
+
+	.banner-height { height: 500px; }
+
+	.banner-fondos-bg {
+		@extend %flexbox;
+		@include flex-wrap(wrap);
+		background-image: url("../images/fondos_banner.jpg");
+		background-size: cover;
+		background-position-y: top;
+		padding: 30px;
+
+		.border-box {
+			margin: 85px 0;
+		}
+
+		.nos-quote {
+			@include justify-content(flex-end);
+			width: 615px;
+		}
+
+		.nos-quote p.main { 
+			margin-bottom: 0;
+			flex-basis: 411px;
+		}
+
+		.nos-quote p.second {
+			margin-bottom: 0;
+			text-align: right;
+		}
+
+		@media #{$medium-and-down} {
+			.nos-quote { background-color: rgba(255,255,255,0.5); }
+		}
+
+		@media #{$small-and-down} {
+			@include justify-content(center);
+
+			.border-box {
+				position: relative;
+				top: 150px;
+    			margin-top: 0;
+    			margin-bottom: 20px;
+			}
+			.nos-quote {
+				@include justify-content(flex-start);
+				background-color: rgba(255,255,255,0.5);
+				background-color: $light-bg-grey;
+				width: 300px;
+			}
+			.nos-quote p.main { 
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	@media #{$small-and-down} {
+		#fondos-banner { height: 600px; }
+	}
+
+	#fondos-como {
+
+		position: relative;
+		@extend %flexbox;
+		@include justify-content(center);
+
+		.fondos-como-img {
+		 	display: none;
+		}
+
+		img {
+			width: 50%;
+		    height: 800px;
+		    min-width: 600px;
+		    margin-top: 10px;
+		}
+
+		.content {
+		    position: absolute;
+		    top: 0px;
+			width: 500px;
+			background-color: $white;
+			padding: 0 35px;
+		}
+
+		@media #{$medium-and-down} {
+			img { margin-top: 30px; }
+		}
+
+		@media #{$small-and-down} {
+			@include flex-direction(column);
+			@include align-items(center);
+
+			.fondos-como-img {
+				background: url('../images/fondos_como_small.svg');
+				background-repeat: no-repeat;
+				display: block;
+		    	height: 25em;
+   			 	width: 20em;
+			}
+
+			img {
+				display: none;
+			}
+
+			.content { 
+				position: relative;
+				width: 100%; 
+
+			}
+
+		}
+	}
+}
+
+// Remove this lines when changes needed
+
+#fondos-cta div span:last-child, #fondos-lista {
+	display: none;
+}
+
+#fid-ventajas {
+	display: none;
+}

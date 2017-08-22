@@ -1,0 +1,134 @@
+
+// ==========================================================================
+// Footer
+// ==========================================================================
+
+
+.footer-info {
+	background-color: $main-color;
+	padding: 40px 40px 20px 40px;
+}
+
+.download-links {
+	margin-top: 35px;
+}
+
+.contact-details {
+	color: $white;
+	font-size: 1.1em;
+	text-align: right;
+	padding: 0 40px!important;
+	margin-top: 55px;
+}
+
+.border-right {
+	height: 280px;
+	border-right: 1px $main-opacity solid;
+}
+
+.border-left {
+	height: 280px;
+	border-left: 1px $main-opacity solid;
+}
+
+@media #{$medium-and-down} {
+	.border-left {display: none}
+	.border-right {
+		height: 260px;
+		margin-bottom: 20px;
+	}
+	.footer-info {
+	    padding: 40px 40px 10px 40px;
+	}
+	.contact-details {
+		padding: 0 10px 0 40px !important;
+	}
+}
+
+@media #{$small-and-down} {
+	.border-left,
+	.border-right {
+		display: block;
+		height: 5px;
+		width: 100%;
+		margin: 20px 0;
+	}
+	.border-left {
+		border-left: none;
+		border-bottom: 1px $main-opacity solid;
+	}
+	.border-right {
+		border-right: none;
+		border-bottom: 1px $main-opacity solid;
+	}
+	.download-links,
+	.contact-details {
+		margin: 0;
+	}
+}
+
+div.footer-navbar {
+	background-color: $sec-color;
+	@extend %flexbox;
+    @include justify-content(space-around);
+    padding: 20px 266px!important;
+    color: $main-opacity;
+}
+
+@media #{$medium-and-down} {
+	div.footer-navbar {
+		padding: 20px 100px!important;
+	}
+}
+
+@media #{$small-and-down} {
+	div.footer-navbar {
+		padding: 20px 20px!important;
+		@include flexbox();
+	    @include justify-content(center);
+	    @include flex-direction(column);
+	    text-align: center
+	}
+	div.footer-navbar a {
+		margin: 5px;
+	}
+}
+
+.footer-navbar a:hover{
+	color: $white;
+}
+
+a.icon-social-facebook,
+a.icon-social-twitter,
+a.icon-social-linkedin {
+	height: 40px;
+	width: 40px;
+	display: inline-block;
+	float: right;
+	margin: 20px 0 0 20px;
+	box-sizing: border-box;
+}
+
+a.icon-social-facebook {
+	background: url("../images/icons/social-facebook-outline.svg") no-repeat;
+}
+
+a.icon-social-twitter {
+	background: url("../images/icons/social-twitter-outline.svg") no-repeat;
+}
+
+a.icon-social-linkedin {
+	background: url("../images/icons/social-linkedin-outline.svg") no-repeat;
+}
+
+a:hover.icon-social-facebook {
+	background: url("../images/icons/social-facebook.svg") no-repeat;
+}
+
+a:hover.icon-social-twitter {
+	background: url("../images/icons/social-twitter.svg") no-repeat;
+}
+
+a:hover.icon-social-linkedin {
+	background: url("../images/icons/social-linkedin.svg") no-repeat;
+}

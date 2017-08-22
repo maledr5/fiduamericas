@@ -1,0 +1,83 @@
+
+// ==========================================================================
+// Home
+// ==========================================================================
+
+
+.banner-a { background-image: url("../images/home_banner_1.jpg"); }
+.banner-b { background-image: url("../images/home_banner_2.jpg"); }
+
+.banner-home {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+	@extend %flexbox;
+	@include align-items(flex-end);
+	padding: 5em 0;
+}
+
+#home-info-fondos, 
+#home-info-fideicomisos {
+	margin: 140px auto;
+}
+
+#home-fondos,
+#home-fideicomisos {
+	margin: 80px 0;
+
+	@extend %flexbox;
+	@include align-items(flex-end);
+	@include justify-content(center);
+
+	div {
+		width: 440px;
+	    margin-right: 20px;	
+
+	    p.second { margin-bottom: 0; }	
+	    p.normal { margin-bottom: 50px; }	
+	}
+
+	img{
+	    width: 600px;
+    	// height: 100%;
+	}
+
+	@media #{$medium-and-down} {
+	    flex-direction: column;
+	    align-items: flex-end;
+	    padding-right: 2em;
+
+	    div {
+    	    position: relative;
+			z-index: 1;
+			order: 2;
+	    }
+
+	    img {
+    	    position: relative;
+    		order: 1;
+	    }
+	}
+
+	@media #{$small-and-down} {
+		div { width: 300px; }
+		img{ width: 135%; }
+		@include align-items(center);
+	}
+}
+
+#home-fideicomisos {
+	div { 
+		@include order(2); 
+		margin-left: 20px;
+	}
+	img { @include order(1); }
+
+	@media #{$medium-and-down} {
+		align-items: flex-start;
+    	padding-left: 2em;
+	}
+	@media #{$small-and-down} {
+		@include align-items(center);
+	}
+}

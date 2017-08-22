@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=News+Cycle:400,700|Noto+Serif:400,700");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+// Mixins
+@import "lib/mixins";
+@import "lib/color";
+
+// Variables;
+@import "lib/variables";
+
+// Reset
+@import "lib/normalize";
+
+// css components
+@import "lib/flex";
+@import "lib/grid";
+
+
+// site components
+@import "components/general";
+@import "components/footer";
+@import "components/navbar";
+@import "components/productsCards";
+
+// pages
+@import "pages/home";
+@import "pages/nosotros";
+@import "pages/fideicomisos";
+@import "pages/fondos";
+@import "pages/contacto";

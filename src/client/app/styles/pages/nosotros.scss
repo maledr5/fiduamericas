@@ -1,0 +1,91 @@
+
+// ==========================================================================
+// Nosotros
+// ==========================================================================
+
+#nos-values {
+	margin: -80px 0 80px 0;
+
+	.value {
+		padding: 0 50px;
+		margin-bottom: 50px;
+	}
+}
+
+#nos-phrases {
+	margin-bottom: 20px;
+    margin-left: -10px;
+
+	.border-box {
+		margin-bottom: 100px;
+	}
+}
+
+.banner-lider-bg {
+	@extend %flexbox;
+	@include align-items(flex-end);
+	background-image: url("../images/lider_bg.png");
+	background-size: cover;
+}
+
+.banner-lider {
+    background-image: url(../images/lider.png);
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    background-repeat: no-repeat;
+    right: 0;
+    background-size: 400px;
+}
+
+.nos-quote {
+	@extend %flexbox;
+	@include flex-wrap(wrap);
+	@include justify-content(flex-end);
+	width: 700px;
+	background-color: rgba(255,255,255,0.5);
+	padding: 30px;
+	z-index: 1;
+}
+
+.nos-quote p.main {
+	flex-basis: 500px;
+}
+
+.nos-quote p.second {
+	margin-bottom: 0;
+	text-align: right;
+}
+
+
+@media #{$medium-and-down} {
+	#nos-phrases {
+		margin-bottom: 300px;
+	}
+	.nos-quote {
+		width: 500px;
+		background-color: $light-bg-grey;
+		@include justify-content(flex-start);
+	}
+	.nos-quote p.second {
+		text-align: left;
+	}
+	#nos-phrases .border-box {
+	    margin: 0 auto;
+	    margin-bottom: -260px;
+	}
+	.banner-lider {
+		width: 430px;
+		height: 480px;
+	}
+}
+
+@media #{$small-and-down} {
+	.nos-quote {
+		width: 300px;
+	}
+	.banner-lider {
+		width: 350px;
+		height: 480px;
+	}
+}

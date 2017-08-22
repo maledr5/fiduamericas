@@ -1,0 +1,162 @@
+
+// ==========================================================================
+// Fideicomisos
+// ==========================================================================
+
+#fid-banner {
+	background-color: $light-grey;
+	padding: 40px 80px;
+}
+
+@media #{$small-and-down} {
+	#fid-banner {
+		padding: 30px 40px;
+	}
+}
+
+#fid-info {
+	position: relative;
+	hyphens: auto;
+	margin-top: -30px;
+
+	.border-box {
+		@include flex-direction(column);
+		z-index: 1;
+	}
+
+	#fid-info-element {
+		position: relative;
+		background-color: $white;
+		border: 1px solid $light-grey;
+		width: 100%;
+		padding: 18px;
+	}
+
+	.fiduciaria {
+		position: absolute;
+	    width: 100px;
+	    top: -74px;
+	    left: calc(50% - 25px);
+	}
+
+	.fiduciaria_bg {
+		height: 130px;
+	}
+
+	.fid-info-small {
+		display: none;
+	}
+
+	.fideicomiso_how {
+	    @extend %flexbox;
+    	padding: 40px 18px !important;
+
+		img {
+			width: 100%;
+    		height: 400px;
+		}
+
+		p {
+			position: absolute;
+		    width: 400px;
+		    left: 50%;
+		}
+	}
+
+	@media #{$medium-and-down} {
+		.fiduciaria {
+		    position: absolute;
+		    top: -80px;
+		    left: 180px;
+		}
+
+		.fideicomiso_how {
+			img { height: 375px; }
+			p { width: 40%; }
+		}
+	}
+
+	@media #{$small-and-down} {
+		.border-box {
+			margin-top: 10px;
+		}
+		.fideicomiso_how {
+			@include flex-direction(column);
+	    	padding: 18px !important;
+
+			img { display: none; }
+
+			p { 
+				position: relative;
+				left: 0;
+				width: 100%; 
+			}
+
+			.fid-info-small {
+			    background-image: url(../images/fideicomiso_info.svg);
+			    background-repeat: no-repeat;
+			    display: block;
+		    	background-size: cover;
+		    	margin-bottom: 0;
+		    	height: 475px;
+		    	width: 300px;
+		    	margin-left: calc(50% - 150px);
+			}
+		}
+	}
+
+}
+
+#fid-ventajas {
+
+    position: relative;
+    top: -160px;
+    z-index: -1;
+    height: 330px;
+
+	.banner-height {
+	    height: 450px;
+	    padding: 160px 40px 40px 40px;
+	}
+
+	.banner-fideicomisos-bg {
+		@extend %flexbox;
+		@include flex-direction();
+		@include justify-content(center);
+		background-image: url("../images/fideicomisos_bg.png");
+		background-size: cover;
+		margin-bottom: 20px;
+
+		div { margin-right: 150px; }
+
+		img {
+			width: 200px;
+			height: 200px;
+		}
+	}
+
+	@media #{$small-and-down} {
+		img { display: none }
+		.banner-fideicomisos-bg div { margin-right: 0; }
+	}
+
+}
+
+#fid-negocios {
+	@extend %flexbox;
+	@include flex-direction(column);
+	margin-bottom: 20px;
+
+	> div {
+		@extend %flexbox;
+		@include flex-direction();
+		@include flex-wrap(wrap);
+	}
+
+    h3 { margin-bottom: 20px; }
+
+    @media #{$small-and-down} {
+		@include align-items(center);
+		> div { @include justify-content(center); }
+	}
+}
