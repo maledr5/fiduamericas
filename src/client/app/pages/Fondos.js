@@ -1,4 +1,6 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
+
 import ContactoCta from '../components/ContactoCta.js'
 
 import fondos_como from '../images/fondos_como.svg'
@@ -24,10 +26,10 @@ const Fondos = () => {
 			<div id="fondos-cta" className="container">
 				<div className="row">
 					<span className="col l4 m6 s10 offset-s1 offset-l7 border-box box-main">
-						<a href="#fondos-como" className="main-link">¿Cómo funciona un fondo?</a>
+                		<Link to="#fondos-como" className="main-link">¿Cómo funciona un fondo?</Link>
 					</span>
 					<span className="col l4 m6 s10 offset-s1 offset-l1 border-box box-main">
-						<a href="#fondos-lista" className="main-link">Conoce nuestros fondos de inversión</a>
+						<Link to="#fondos-lista" className="main-link">Conoce nuestros fondos de inversión</Link>
 					</span>
 				</div>
 			</div>

@@ -1,5 +1,8 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
+import { NavLink } from 'react-router-dom';
+
+import Carousel from '../components/HomeCarousel.js'
 
 import fondos from '../images/home_fondos.jpg'
 import fideicomisos from '../images/home_fideicomisos_2.jpg'
@@ -8,15 +11,8 @@ import fideicomisos from '../images/home_fideicomisos_2.jpg'
 const Home = () => {
 	return (
 		<div>
-			
-			<div id="nos-banner">
-				<div className="full-screen banner-height banner-home banner-a parallax">
-					<div className="text-sec container">
-						<h2>El mejor rendimiento <br/> del mercado</h2>
-						<p className="main">Descubre nuestros fondos de inversión</p>
-					</div>
-				</div>
-			</div>
+
+			<div id="home-banner"><Carousel /></div>
 
 			<div id="home-cta" className="container">
 				<div className="row">
@@ -33,7 +29,7 @@ const Home = () => {
 				<div className="l5 text-main right">
 					<h2>Pequeños ahorros hacia grandes sueños.</h2>
 					<p className="normal text-dark">El <strong>fondo de inversión</strong> es un patrimonio común <br/> cuyo objetivo es generar rendimientos.</p>
-					<a className="second-link">¿Cómo funciona un fondo de inversión?</a>
+                	<Link to="/fondos#header" className="second-link">¿Cómo funciona un fondo de inversión?</Link>
 				</div>
 				<img src={fondos} />
 			</div>
@@ -54,7 +50,7 @@ const Home = () => {
 				<div className="l5 text-main left">
 					<h2>Bienes administrados con seguridad y eficiencia.</h2>
 					<p className="normal text-dark">El <strong>fideicomiso</strong> es un contrato con un objetivo determinado, vinculado a un patrimonio.</p>
-					<a className="second-link">¿Cómo funciona un fideicomiso?</a>
+					<Link to="/fideicomisos#header" className="second-link">¿Cómo funciona un fideicomiso?</Link>
 				</div>
 				<img src={fideicomisos} />
 			</div>

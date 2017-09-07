@@ -71,10 +71,10 @@ const Nosotros = () => {
 				</div>
 				<div className="row">
 					<span className="col l3 m4 s8 offset-l2 offset-m1 offset-s2 border-box box-dark">
-						<a href="#/fideicomisos#fid-banner" className="main-link">Negocios Fiduciarios</a>
+                		<Link to="/fideicomisos#header" className="main-link">Negocios Fiduciarios</Link>
 					</span>
 					<span className="col l3 m4 s8 offset-l2 offset-m2 offset-s2 border-box box-dark">
-						<a href="#/fondos" className="main-link">Fondos de Inversión</a>
+						<Link to="/fondos#header" className="main-link">Fondos de Inversión</Link>
 					</span>
 				</div>
 			</div>

@@ -72,7 +72,7 @@ div.footer-navbar {
 	@extend %flexbox;
     @include justify-content(space-around);
     padding: 20px 266px!important;
-    color: $main-opacity;
+    color: $main-opacity!important;
 }
 
 @media #{$medium-and-down} {
@@ -94,8 +94,12 @@ div.footer-navbar {
 	}
 }
 
-.footer-navbar a:hover{
-	color: $white;
+.footer-navbar a:hover {
+	color: $white!important;
+}
+
+.footer-navbar a {
+	color: $main-opacity!important;
 }
 
 a.icon-social-facebook,

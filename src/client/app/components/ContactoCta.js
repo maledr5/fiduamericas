@@ -1,4 +1,6 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 const ContactoCta = () => {
 	return (
@@ -7,17 +9,17 @@ const ContactoCta = () => {
 			<div className="actions">
 				<div>
 					<span className="border-box box-dark">
-						<a href="#/fideicomisos" className="main-link">Negocios Fiduciarios</a>
+						<Link to="/fideicomisos#header" className="main-link">Negocios Fiduciarios</Link>
 					</span>
 				</div>
 				<div>
 					<span className="border-box box-dark">
-						<a href="#/contacto" className="main-link">Formulario de Contacto</a>
+						<Link to="/contacto#header" className="main-link">Formulario de Contacto</Link>
 					</span>
 				</div>
-				<div>
+				<div className="hidden">
 					<span className="border-box box-dark">
-						<a href="#/faq" className="main-link">Preguntas Frecuentes</a>
+						<Link to="/faq#header" className="main-link">Preguntas Frecuentes</Link>
 					</span>
 				</div>
 			</div>

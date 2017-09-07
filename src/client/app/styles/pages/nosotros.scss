@@ -24,7 +24,7 @@
 .banner-lider-bg {
 	@extend %flexbox;
 	@include align-items(flex-end);
-	background-image: url("../images/lider_bg.png");
+	background-image: url("../images/lider_bg.jpg");
 	background-size: cover;
 }
 

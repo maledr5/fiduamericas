@@ -17,12 +17,13 @@ const App = () =>
 
         <Header />
 
-        <Route path="/nosotros" component={Nosotros} />
-        <Route path="/fideicomisos" component={Fideicomisos} />
-        <Route path="/fondos" component={Fondos} />
-        <Route path="/faq" component={Faq} />
-        <Route path="/contacto" component={Contacto} />
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/nosotros" component={Nosotros} />
+        <Route exact path="/fideicomisos" component={Fideicomisos} />
+        <Route exact path="/fondos" component={Fondos} />
+        <Route exact path="/faq" component={Faq} />
+        <Route exact path="/contacto" component={Contacto} />
 
         <Footer />
 

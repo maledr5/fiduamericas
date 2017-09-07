@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header>
+    <header id="header">
       <nav className="container">
         <div className="main-header row">
-          <NavLink className="col l3 brand" to="/"></NavLink>
+          <NavLink className="col l3 brand" to="/home"></NavLink>
           <nav className="col l8 offset-l2">
             <input type="checkbox" id="nav"/><label htmlFor="nav"></label>
             <div className="nav-background"></div>
@@ -23,7 +23,7 @@ const Header = () => {
                 <NavLink className="navbar-link" to="/fondos">
                 Fondos</NavLink>
               </li>
-              <li>
+              <li className="hidden">
                 <NavLink className="navbar-link" to="/faq">
                 FAQ</NavLink>
               </li>
