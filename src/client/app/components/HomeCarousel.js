@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 class HomeCarousel extends React.Component {
   render () {
     var settings = {
-      dots: false,
+      dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
@@ -19,7 +19,7 @@ class HomeCarousel extends React.Component {
       	<div id="nos-banner">
     			<div className="full-screen banner-height banner-home banner-a">
     				<div className="text-sec container">
-    					<h2>El mejor rendimiento <br/> del mercado</h2>
+    					<h2>El mayor rendimiento <br/> del mercado</h2>
     					<p className="main">Descubre nuestros fondos de inversión</p>
     				</div>
     			</div>
@@ -28,7 +28,7 @@ class HomeCarousel extends React.Component {
     			<div className="full-screen banner-height banner-home banner-c">
     				<div className="text-sec container">
     					<h2>La mejor administración <br/>fiduciaria del mercado</h2>
-    					<p className="main">Contactanos y te asesoramos <br/>sobre las mejores opciones</p>
+    					<p className="main">Contáctanos y te asesoramos <br/>sobre las mejores opciones</p>
     				</div>
     			</div>
         </div>

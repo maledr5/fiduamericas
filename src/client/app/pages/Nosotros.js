@@ -13,7 +13,7 @@ const Nosotros = () => {
 				<div className="full-screen banner-height banner-second parallax">
 					<p className="banner-text text-light">
 						<span className="font-second"> Fiduciaria de las Américas </span>
-						<span className="font-main"> es una administradora de fondos y fideicomisos. Somos un grupo de profesionales multidisciplinarios con amplia experiencia en materia fiduciaria, financiera y legal.</span>
+						<span className="font-main"> es una administradora de fondos y fideicomisos, conformada por un grupo de profesionales multidisciplinarios con amplia experiencia en materia fiduciaria, financiera y legal.</span>
 					</p>
 				</div>
 				<div className="container">
@@ -67,7 +67,7 @@ const Nosotros = () => {
 			</div>
 			<div id="opciones-cta" className="container center-text">
 				<div className="row">
-					<h5 className="col s12">DESCUBRE LAS MEJORES OPCIONES PARA INVERTIR</h5>
+					<h5 className="col s12">DESCUBRE NUESTROS PRODUCTOS Y SERVICIOS</h5>
 				</div>
 				<div className="row">
 					<span className="col l3 m4 s8 offset-l2 offset-m1 offset-s2 border-box box-dark">

@@ -17,10 +17,10 @@ const Home = () => {
 			<div id="home-cta" className="container">
 				<div className="row">
 					<span className="col s8 m4 offset-s2 border-box box-main">
-						<Link to="#home-fondos" className="main-link">Negocios Fiduciarios</Link>
+						<Link to="/fideicomisos#heade" className="main-link">Negocios Fiduciarios</Link>
 					</span>
 					<span className="col s8 m4 offset-s2 offset-l1 offset-m1 border-box box-main">
-						<Link to="#home-fideicomisos" className="main-link">Fondos de Inversión</Link>
+						<Link to="/fondos#header" className="main-link">Fondos de Inversión</Link>
 					</span>
 				</div>
 			</div>

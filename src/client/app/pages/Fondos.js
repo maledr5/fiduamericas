@@ -36,7 +36,7 @@ const Fondos = () => {
 	
 			<div id="fondos-como">
 				<div className="content">
-					<h3>¿Cómo fuciona un fondo de inversión?</h3>
+					<h3>¿Cómo funciona un fondo de inversión?</h3>
 					<p className="normal text-dark">El fondo de inversión es un patrimonio común que es invertido por un comité especializado, en diversos títulos valor con el fin de generar rendimiento, liquidez y seguridad para nuestros inversionistas.</p>
 				</div>
 				<img src={fondos_como} />
