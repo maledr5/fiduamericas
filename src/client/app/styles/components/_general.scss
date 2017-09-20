@@ -474,9 +474,21 @@ a.second-link:hover {
 // 2. CTAs
 // ==========================================================================
 
-#fondos-cta, #home-cta {
+#home-cta,
+#faq-cta {
+    position: relative;
+}
+
+#fondos-cta,
+#faq-cta,
+#home-cta {
 	margin-bottom: 40px;
 	span { margin-top: -40px; }
+}
+
+#faq-cta {
+	margin-bottom: 40px;
+	span { margin-top: -80px; }
 }
 
 @media #{$small-and-down} {
