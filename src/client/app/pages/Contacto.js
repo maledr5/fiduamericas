@@ -3,7 +3,7 @@ import React from 'react';
 const Contacto = () => {
 	return (
 		<div>
-			<div className="container page-header text-main">
+			<div className="container text-main">
 				<div className="row">
 					<h1 className="col offset-s1">Contacto</h1>
 					<div className="col offset-s1 header-division"></div>
