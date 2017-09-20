@@ -10,6 +10,7 @@ import Fideicomisos from './pages/Fideicomisos';
 import Fondos from './pages/Fondos';
 import Faq from './pages/Faq';
 import Contacto from './pages/Contacto';
+import Resoluciones from './pages/Resoluciones';
 
 const App = () =>
     <HashRouter>
@@ -24,6 +25,7 @@ const App = () =>
         <Route exact path="/fondos" component={Fondos} />
         <Route exact path="/faq" component={Faq} />
         <Route exact path="/contacto" component={Contacto} />
+        <Route exact path="/resoluciones" component={Resoluciones} />
 
         <Footer />
 

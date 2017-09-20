@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 
-import resoluciones from '../data/downloads/resoluciones.pdf'
 import tarifario from '../data/downloads/tarifario.pdf'
 
 
@@ -13,7 +12,7 @@ const Footer = () => {
 			<div className="container">
 				<div className="row">
 					<div className="col l3 m5 s12 download-links">
-						<a href={resoluciones} className="button-light block-display" target="_blank">Resoluciones</a>
+						<Link to="/resoluciones#header" className="button-light block-display">Resoluciones</Link>
 						<a href={tarifario} className="button-light block-display" target="_blank">Tarifario</a>
 						<a className="button-light block-display">Marco Legal</a>	
 					</div>
