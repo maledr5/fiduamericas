@@ -354,13 +354,15 @@ a:-webkit-any-link { text-decoration: none; }
 }
 
 a,
-input[type=button] {
+input[type=button],
+input[type=submit] {
 	cursor: pointer;
 	text-decoration: none;
 }
 
 footer a,
-input[type=button] {
+input[type=button],
+input[type=submit] {
 	transition: all 0.2s;
 }
 
@@ -374,7 +376,9 @@ a:focus {
 
 .button-light,
 input[type=button].input-light,
-input[type=button].input-main {
+input[type=button].input-main,
+input[type=submit].input-light,
+input[type=submit].input-main {
 	font-size: 1.1em;
 	text-align: center;
 	padding: 10px 10px;
@@ -384,30 +388,35 @@ input[type=button].input-main {
 }
 
 .button-light,
-input[type=button].input-light {
+input[type=button].input-light,
+input[type=submit].input-light {
 	color: $white;
 	border: 1px $white solid;
 	background-color: transparent;
 }
 
-input[type=button].input-main {
+input[type=button].input-main,
+input[type=submit].input-main {
 	color: $white;
 	background-color: $main-color;
 	border: none;
 }
 
 .button-light:hover,
-input[type=button]:hover {
+input[type=button]:hover,
+input[type=submit]:hover {
 	color: $main-color;
 	background-color: $white;
 }
 
-input[type=button].input-main:hover {
+input[type=button].input-main:hover,
+input[type=submit].input-main:hover {
 	color: $white;
 	background-color: $sec-color;
 }
 
-input[type=button] {
+input[type=button],
+input[type=submit] {
 	padding: 8px 10px
 }
 
@@ -551,14 +560,16 @@ select {
     -moz-border-radius: 0px;
     -mox-box-shadow: none;
 }
-
+input[type=email].input-light,
+input[type=tel].input-light,
 input[type=text].input-light,
 textarea.input-light {
 	background-color: $main-opacity;
 	color: $white;
 	border: 0;
 }
-
+input[type=email].input-main,
+input[type=tel].input-main,
 input[type=text].input-main,
 textarea.input-main,
 select.input-main {
@@ -566,9 +577,12 @@ select.input-main {
 	border: 1px solid $main-color;
 }
 
-
 input[type=text].input-main,
 input[type=text].input-light,
+input[type=email].input-main,
+input[type=email].input-light,
+input[type=tel].input-main,
+input[type=tel].input-light,
 textarea.input-light,
 textarea.input-main {
 	font-size: 1.1em;

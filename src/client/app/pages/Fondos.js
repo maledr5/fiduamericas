@@ -56,7 +56,7 @@ const Fondos = () => {
 				</div>
 			</div>
 
-			<ContactoCta />
+			<ContactoCta productCta="fideicomisos"/>
 
 		</div>
 	)

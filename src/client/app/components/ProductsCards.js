@@ -6,7 +6,7 @@ class ProductsCards extends Component {
 	}
 
 	_buildProducts() {
-		const products = this.props.products
+		const products = this.props.products;
 		return products.map( (product) => {
 			return (
 				<div className="product-container box-light-grey">

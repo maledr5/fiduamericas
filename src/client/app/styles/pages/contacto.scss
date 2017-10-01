@@ -2,14 +2,17 @@
 // ==========================================================================
 // Contacto
 // ==========================================================================
+.form-response {
+	.icon-sent {
+		width: 200px;
+		height: 100px;
+	}
+}
 
 #contact-form {
 	margin-bottom: 50px;
-	
-	input, textarea {
-		// margin-right: 60px;
-	}
-	p {
+
+	form p {
 		position: relative;
 		top: 25px;
 	}
