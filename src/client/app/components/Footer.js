@@ -2,6 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 
+import ContactForm from '../components/ContactForm.js'
+
 import tarifario from '../data/downloads/tarifario.pdf'
 
 
@@ -26,12 +28,7 @@ const Footer = () => {
 					</div>
 					<div className="col l1 border-left"></div>
 					<div className="col l3 m12 s12">
-						<form>
-							<input className="input-light" type="text" name="input-name" placeholder="Nombre y Apellido" />
-							<input className="input-light" type="text" name="input-email" placeholder="Correo Electrónico" />
-							<textarea className="input-light" rows="3" cols="30" name="input-message" placeholder="Consulta o Mensaje"></textarea>
-							<input className="input-light" type="button" name="footer-submit" value="Enviar Consulta" />
-						</form>
+						<ContactForm formType="main" formType="footer" />
 					</div>
 				</div>
 			</div>

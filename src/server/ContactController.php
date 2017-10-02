@@ -31,7 +31,7 @@ function sendMail($name, $mail, $phone, $message, $type){
 	$message = createMessage($name, $mail, $phone, $message, $type);
 	$headers = createMailHeaders($mail);
 
-	$to = "maledr5@gmail.com, maledr5@hotmail.es";
+	$to = "maledr5@gmail.com, maledr5@hotmail.es, info@fiduamericas.com";
     $subject = "Mensaje enviado desde fiduamericas.com";
         
     mail($to, $subject, $message, $headers);

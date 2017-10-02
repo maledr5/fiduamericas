@@ -135,6 +135,10 @@ p.normal {
 	color: $sec-color;
 }
 
+.text-center-align {
+	text-align: center;
+}
+
 .left { text-align: left; }
 .right { text-align: right; }
 
@@ -159,7 +163,7 @@ p.normal {
 }
 
 #quote {
-		@extend %flexbox;
+	@extend %flexbox;
 }
 
 .page-header {

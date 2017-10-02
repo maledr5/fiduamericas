@@ -9,6 +9,14 @@
 	}
 }
 
+footer .form-response {
+	@extend %flexbox;
+	@include flex-direction(column);
+    margin-top: 55px;
+
+    img { align-self: center; }
+}
+
 #contact-form {
 	margin-bottom: 50px;
 
