@@ -20,23 +20,25 @@ class Contacto extends React.Component {
 		};
 	}
 
-	send() {
-		console.log("in here");
+	send(submitEvent, contex) {
+		submitEvent.preventDefault();
+
 		axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 		axios.post("http://fiduamericas.com/ContactController.php", {
-			"name": this.state.nameValue,
-			"mail": this.state.mailValue,
-			"phone": this.state.phoneValue,
-			"message": this.state.messageValue,
-			"type": this.state.typeValue
+			"name": contex.state.nameValue,
+			"mail": contex.state.mailValue,
+			"phone": contex.state.phoneValue,
+			"message": contex.state.messageValue,
+			"type": contex.state.typeValue
 		})
 		  .then(function (response) {
 		    console.log(response);
-		    this.hanldeSuccess();
+		    contex.hanldeSuccess();
 		  })
 		  .catch(function (error) {
 		    console.log(error); // TODO: Handle error
 		  });
+		return false;
 	}
 
 	updateValue(evt) {
@@ -49,7 +51,7 @@ class Contacto extends React.Component {
 		this.setState({ hasError: false });
 		this.setState({ isMessageSent: true });
 	}
-
+	
 	render() {
 		return (
 			<div>
@@ -69,7 +71,7 @@ class Contacto extends React.Component {
 						:
 						<div>
 							<div className="form-message"></div>
-							<form onSubmit={this.send.bind(this)}>
+							<form onSubmit={evt => this.send(evt, this)}>
 								<div className="row">
 									<input
 										className="col s10 l4 offset-s1 offset-m1 offset-l2 input-main"
