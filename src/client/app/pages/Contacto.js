@@ -32,13 +32,11 @@ class Contacto extends React.Component {
 		})
 		  .then(function (response) {
 		    console.log(response);
-
+		    this.hanldeSuccess();
 		  })
 		  .catch(function (error) {
 		    console.log(error); // TODO: Handle error
 		  });
-
-		this.hanldeSuccess();
 	}
 
 	updateValue(evt) {
@@ -92,7 +90,13 @@ class Contacto extends React.Component {
 										required="required" />
 								</div>
 								<div className="row">
-									<input className="col s10 l4 offset-s1 offset-m1 offset-l2 input-main" type="text" value={this.state.phoneValue} onChange={evt => this.updateValue(evt)} name="phone" placeholder="Teléfono o celular" />
+									<input
+										className="col s10 l4 offset-s1 offset-m1 offset-l2 input-main"
+										type="tel"
+										pattern='^\+?\d{0,13}'
+										value={this.state.phoneValue} onChange={evt => this.updateValue(evt)}
+										name="phone"
+										placeholder="Teléfono o celular" />
 									<p className="col s10 l3 offset-s1 offset-m1 offset-l1 second text-main">Quiero información acerca de:</p>
 								</div>
 								<div className="row">
