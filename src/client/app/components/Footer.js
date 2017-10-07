@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 
 import ContactForm from '../components/ContactForm.js'
+import ContactDetails from '../components/ContactDetails.js'
 
 import tarifario from '../data/downloads/tarifario.pdf'
 
@@ -19,12 +20,8 @@ const Footer = () => {
 						<a className="button-light block-display">Marco Legal</a>	
 					</div>
 					<div className="col l1 m1 border-right"></div>
-					<div className="col l4 m6 s12 contact-details">
-							+593 (2) 600 0150<br/>
-							Edificio Mirage, Oficina 8A, Av. 12 de Octubre N26-48 y Orellana. <br/>
-							<a className="icon-social-facebook"></a>
-							<a className="icon-social-twitter"></a>
-							<a className="icon-social-linkedin"></a>
+					<div className="col l4 m6 s12 contact-details-container cotact-details-ligth text-light">
+						<ContactDetails />
 					</div>
 					<div className="col l1 border-left"></div>
 					<div className="col l3 m12 s12">

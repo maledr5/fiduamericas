@@ -2,6 +2,22 @@
 // ==========================================================================
 // Contacto
 // ==========================================================================
+
+#contacto {
+	margin-bottom: 40px;
+
+	.contact-details-container { margin-top: 0; }
+
+	@media #{$medium-and-down} {
+		.contact-details-container {
+			margin: 0;
+			margin-bottom: 40px;
+			text-align: center;
+			a { float: none; }
+		}
+	}
+}
+
 .form-response {
 	.icon-sent {
 		width: 200px;
@@ -25,3 +41,4 @@ footer .form-response {
 		top: 25px;
 	}
 }
+

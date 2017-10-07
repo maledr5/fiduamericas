@@ -1,0 +1,74 @@
+
+// ==========================================================================
+// Contact Details
+// ==========================================================================
+
+.contact-details-container {
+	font-size: 1.1em;
+	text-align: right;
+	padding: 0 40px!important;
+	margin-top: 55px;
+
+	a.icon-social-facebook,
+	a.icon-social-twitter,
+	a.icon-social-linkedin {
+		height: 40px;
+		width: 40px;
+		display: inline-block;
+		float: right;
+		margin: 20px 0 0 20px;
+		box-sizing: border-box;
+	}
+}
+
+.cotact-details-ligth {
+	a.icon-social-facebook {
+		background: url("../images/icons/social-facebook-outline.svg") no-repeat;
+	}
+
+	a.icon-social-twitter {
+		background: url("../images/icons/social-twitter-outline.svg") no-repeat;
+	}
+
+	a.icon-social-linkedin {
+		background: url("../images/icons/social-linkedin-outline.svg") no-repeat;
+	}
+
+	a:hover.icon-social-facebook {
+		background: url("../images/icons/social-facebook.svg") no-repeat;
+	}
+
+	a:hover.icon-social-twitter {
+		background: url("../images/icons/social-twitter.svg") no-repeat;
+	}
+
+	a:hover.icon-social-linkedin {
+		background: url("../images/icons/social-linkedin.svg") no-repeat;
+	}
+}
+
+.cotact-details-main {
+	a.icon-social-facebook {
+		background: url("../images/icons/social-facebook-main-outline.svg") no-repeat;
+	}
+
+	a.icon-social-twitter {
+		background: url("../images/icons/social-twitter-main-outline.svg") no-repeat;
+	}
+
+	a.icon-social-linkedin {
+		background: url("../images/icons/social-linkedin-main-outline.svg") no-repeat;
+	}
+
+	a:hover.icon-social-facebook {
+		background: url("../images/icons/social-facebook-main.svg") no-repeat;
+	}
+
+	a:hover.icon-social-twitter {
+		background: url("../images/icons/social-twitter-main.svg") no-repeat;
+	}
+
+	a:hover.icon-social-linkedin {
+		background: url("../images/icons/social-linkedin-main.svg") no-repeat;
+	}
+}
