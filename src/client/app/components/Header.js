@@ -23,7 +23,7 @@ const Header = () => {
                 <NavLink className="navbar-link" to="/fondos">
                 Fondos</NavLink>
               </li>
-              <li className="hidden">
+              <li>
                 <NavLink className="navbar-link" to="/faq">
                 FAQ</NavLink>
               </li>

@@ -54,6 +54,27 @@ class ContactoForm extends React.Component {
 		console.log("form type: " + this.formType)
 	}
 
+	componentDidMount(props) {
+		this.setDefaults();
+	}
+
+	setDefaults() {
+		var defaultType = this.props.defaultType;
+		if (!!defaultType){
+			var defaultFondosMessage = "Quisiera más información a cerca de ";
+			var productTypes = {
+				"fideicomisos": "Negocios Fiduciarios",
+				"fondos": "Fondos de Inversión"
+			};
+
+			var currentProduct = productTypes[defaultType];
+			var messageForProduct = defaultFondosMessage + currentProduct + ".";
+
+			this.setState({"typeValue": currentProduct});
+			this.setState({"messageValue": messageForProduct});
+		}
+	}
+
 	getMainForm() {
 		return (
 			<div>
@@ -112,15 +133,20 @@ class ContactoForm extends React.Component {
 										name="message"
 										placeholder="Consulta o Mensaje">
 									</textarea>
-									<select className="col s10 l3 offset-s1 offset-m1 offset-l1 input-main" value={this.state.typeValue} onChange={evt => this.updateValue(evt)} name="type">
-										<option value="" disabled defaultValue>Escoge un tipo de consulta</option>
+									<select className="col s10 l3 offset-s1 offset-m1 offset-l1 input-main"
+											value={this.state.typeValue}
+											onChange={evt => this.updateValue(evt)}
+											name="type"
+									>
+										<option value="" disabled >Escoge un tipo de consulta</option>
 										<option value="Negocios Fiduciarios">Negocios Fiduciarios</option>
 										<option value="Fondos de Inversión">Fondos de Inversión</option>
 										<option value="Otro tipo de consulta">Otro tipo de consulta</option>
-									</select><span className="caret caret-down"></span>
+									</select>
+									<span className="caret caret-down"></span>
 								</div>
 								<div className="row">
-									<input className="col s10 l8 offset-s1 offset-m1 offset-l2 input-main" type="submit" name="footer-submit" value="Enviar Consulta" />
+									<input className="col s10 l8 offset-s1 offset-m1 offset-l2 input-main"type="submit" name="footer-submit" value="Enviar Consulta" />
 								</div>
 							</form>
 						</div>
@@ -171,11 +197,6 @@ class ContactoForm extends React.Component {
 				}
 			</div>
 		);
-
-		return (
-			<div></div>
-		);
-
 	}
 
 	render() {

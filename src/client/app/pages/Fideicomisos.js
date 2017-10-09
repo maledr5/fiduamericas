@@ -96,7 +96,7 @@ const Fideicomisos = () => {
 				<ProductsCards products={fideicomisosData()} />
 			</div>
 
-			<ContactoCta productCta="fondos"/>
+			<ContactoCta productCta="fondos" CurrentProduct="fideicomisos"/>
 
 		</div>
 	)

@@ -34,7 +34,7 @@ const Footer = () => {
 			<Link to="/nosotros#header" className="navbar-link">Quienes somos</Link>
 			<Link to="/fideicomisos#header" className="navbar-link">Negocios Fiduciarios</Link>
 			<Link to="/fondos#header" className="navbar-link">Fondos</Link>
-			<Link to="/faq#header" className="navbar-link hidden">FAQ</Link>
+			<Link to="/faq#header" className="navbar-link">FAQ</Link>
 			<Link to="/contacto#header" className="navbar-link">Contacto</Link>
 		</div>
     </footer>
