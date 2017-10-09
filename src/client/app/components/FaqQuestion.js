@@ -22,7 +22,7 @@ const FaqQuestion = React.createClass({
 
 	render() {
 		return (
-			<div>
+			<div className="faq-question">
 				<a onClick={ () => this.toggleState() }>
 					<span className={this.state.showAnswer ? "caret caret-up" : "caret caret-down"}></span>
 					<h3 className="faq-question text-main">{this.props.question}</h3>

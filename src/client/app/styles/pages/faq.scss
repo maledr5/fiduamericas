@@ -4,18 +4,7 @@
 // ==========================================================================
 
 #faq {
-
-
-	#faq-fondos,
-	#faq-fiduciarios {
-		a {
-			span { margin-left: 10px; }
-			h3 {
-				display: inline-block;
-				margin-left: 20px;
-			}
-		}
-	}
+	margin-bottom: 80px;
 
 	// img {
 	// 	width: 100px;
@@ -29,11 +18,17 @@
 	}
 
 	.faq-question {
-
+		a {
+			span { margin-left: 10px; }
+			h3 {
+				display: inline-block;
+				margin-left: 20px;
+			}
+		}
 	}
 
 	.faq-answer {
-
+		padding-left: 45px;
 	}
 
 }

@@ -3,9 +3,9 @@ import React from 'react';
 import FaqQuestion from '../../components/FaqQuestion.js'
 
 
-const question = "¿Cuales son los beneficios de invertir en un fondo de inversión?";
+const question = "¿Cuáles son los beneficios de invertir en un fondo de inversión?";
 
-const answer = 
+const answer =
 <div>
 	<ul>
 		<li><strong>Administración profesional:</strong> Un inversionista común se enfrenta al desconocimiento de las técnicas que ayudan a optimizar el manejo de un portafolio de inversión y que ayudan a realizar una correcta administración de riesgos. </li>
@@ -19,7 +19,7 @@ const answer =
 	</ul>
 </div>;
 
-const faqQuestion = 
+const faqQuestion =
 <FaqQuestion
 	question={ question }
 	answer={ answer }

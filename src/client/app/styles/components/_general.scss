@@ -11,7 +11,6 @@ textarea {
 	font-family: $font-main;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	
 }
 
 body {
@@ -662,3 +661,10 @@ input:-webkit-autofill {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
+
+
+// x. List
+// ==========================================================================
+
+ul.no-bullets { list-style-type: none; }
+
