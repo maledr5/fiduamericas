@@ -8,21 +8,21 @@
 .banner-b { background-image: url("../images/home_banner_2.jpg"); }
 .banner-c { background-image: url("../images/home_banner_3.jpg"); }
 
-// #home-banner {
-// 	.slick-dots {
-// 		bottom: 50px;
-// 	    bottom: 90%;
-// 		left: 90%;
-// 	}
-// }
+#home-banner {
+	.slick-dots {
+		bottom: 50px;
+	    bottom: 90%;
+		left: 90%;
+	}
+}
 
-// @media #{$medium-and-down} {
-// 	#home-banner .slick-dots { left: 80%; }
-// }
+@media #{$medium-and-down} {
+	#home-banner .slick-dots { left: 80%; }
+}
 
-// @media #{$small-and-down} {
-// 	#home-banner .slick-dots { left: 70%; }
-// }
+@media #{$small-and-down} {
+	#home-banner .slick-dots { left: 70%; }
+}
 
 
 .banner-home {
