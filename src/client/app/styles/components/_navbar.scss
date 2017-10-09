@@ -79,7 +79,7 @@ nav {
 			right: 20px;
 			top: 0px;
 		}
-	  
+
 		nav label:after {
 		  content:'';
 		  display: block;
@@ -97,7 +97,7 @@ nav {
 
 		nav [type="checkbox"]:checked ~ label::after{
 			content: "\d7"; /* hex value for X */
-			font-size: 50px; 
+			font-size: 50px;
 	   		color: #FFF;
 			box-shadow: none;
 			background: none;

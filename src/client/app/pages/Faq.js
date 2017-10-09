@@ -22,7 +22,7 @@ const Faq = () => {
 		<div id="faq" className="container">
 			<div className="page-header text-main">
 				<div className="row">
-					<h1 className="col offset-s1">FAQ Preguntas Frecuentes</h1>
+					<h1 className="col offset-s1">FAQ</h1>
 					<div className="col offset-s1 header-division header-division-no-margin"></div>
 					<h3 className="col offset-s1">Preguntas Frecuentes</h3>
 				</div>

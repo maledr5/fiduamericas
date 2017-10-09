@@ -8,21 +8,21 @@
 .banner-b { background-image: url("../images/home_banner_2.jpg"); }
 .banner-c { background-image: url("../images/home_banner_3.jpg"); }
 
-#home-banner {
-	.slick-dots {
-		bottom: 50px;
-	    bottom: 90%;
-		left: 90%;
-	}
-}
+// #home-banner {
+// 	.slick-dots {
+// 		bottom: 50px;
+// 	    bottom: 90%;
+// 		left: 90%;
+// 	}
+// }
 
-@media #{$medium-and-down} {
-	#home-banner .slick-dots { left: 80%; }
-}
+// @media #{$medium-and-down} {
+// 	#home-banner .slick-dots { left: 80%; }
+// }
 
-@media #{$small-and-down} {
-	#home-banner .slick-dots { left: 70%; }
-}
+// @media #{$small-and-down} {
+// 	#home-banner .slick-dots { left: 70%; }
+// }
 
 
 .banner-home {
@@ -41,7 +41,7 @@
 	}
 }
 
-#home-info-fondos, 
+#home-info-fondos,
 #home-info-fideicomisos {
 	margin: 140px auto;
 }
@@ -56,10 +56,10 @@
 
 	div {
 		width: 440px;
-	    margin-right: 20px;	
+	    margin-right: 20px;
 
-	    p.second { margin-bottom: 0; }	
-	    p.normal { margin-bottom: 50px; }	
+	    p.second { margin-bottom: 0; }
+	    p.normal { margin-bottom: 50px; }
 	}
 
 	img{
@@ -85,15 +85,20 @@
 	}
 
 	@media #{$small-and-down} {
-		div { width: 300px; }
+		padding: 20px;
+		div {
+			width: 300px;
+			margin-right: 0;
+			padding: 20px;
+		}
 		img{ width: 135%; }
 		@include align-items(center);
 	}
 }
 
 #home-fideicomisos {
-	div { 
-		@include order(2); 
+	div {
+		@include order(2);
 		margin-left: 20px;
 	}
 	img { @include order(1); }

@@ -6,6 +6,8 @@ class HomeCarousel extends React.Component {
   render () {
     var settings = {
       dots: true,
+      dotsClass:'custom-dots',
+      arrows: false,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
@@ -15,7 +17,7 @@ class HomeCarousel extends React.Component {
     };
     return (
       <Slider {...settings}>
-      
+
       	<div id="nos-banner">
     			<div className="full-screen banner-height banner-home banner-a">
     				<div className="text-sec container">
@@ -32,7 +34,7 @@ class HomeCarousel extends React.Component {
     				</div>
     			</div>
         </div>
-        
+
 
       </Slider>
     );

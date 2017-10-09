@@ -19,7 +19,11 @@
 
 	.faq-question {
 		a {
-			span { margin-left: 10px; }
+			span {
+				margin-left: 10px;
+				margin-right: 20px;
+			}
+
 			h3 {
 				display: inline-block;
 				margin-left: 20px;
@@ -29,6 +33,10 @@
 
 	.faq-answer {
 		padding-left: 45px;
+	}
+
+	@media #{$small-and-down} {
+		.page-header h3 { margin-bottom: 1em; }
 	}
 
 }
