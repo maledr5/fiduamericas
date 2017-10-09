@@ -5,3 +5,6 @@ HORAS.txt
 node_modules
 src/client/public/*.*
 .sass-cache/
+
+src/client/app/styles/index.css
+src/client/app/styles/index.css.map
