@@ -40,5 +40,13 @@ footer .form-response {
 		position: relative;
 		top: 25px;
 	}
+
+	.caret {
+		position: relative;
+		left: -45px;
+		top: 20px;
+
+		@media #{$medium-and-down} { top: 140px; }
+	}
 }
 

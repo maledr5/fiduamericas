@@ -117,7 +117,7 @@ class ContactoForm extends React.Component {
 										<option value="Negocios Fiduciarios">Negocios Fiduciarios</option>
 										<option value="Fondos de Inversión">Fondos de Inversión</option>
 										<option value="Otro tipo de consulta">Otro tipo de consulta</option>
-									</select>
+									</select><span className="caret caret-down"></span>
 								</div>
 								<div className="row">
 									<input className="col s10 l8 offset-s1 offset-m1 offset-l2 input-main" type="submit" name="footer-submit" value="Enviar Consulta" />
