@@ -21,7 +21,6 @@ const FaqQuestion = React.createClass({
     },
 
 	render() {
-	console.log(this.state.showAnswer);
 		return (
 			<div>
 				<a onClick={ () => this.toggleState() }><h3 className="faq-question text-main">{this.props.question}</h3></a>
