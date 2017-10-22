@@ -8,3 +8,5 @@ src/client/public/*.*
 
 src/client/app/styles/index.css
 src/client/app/styles/index.css.map
+
+src/server/vendor

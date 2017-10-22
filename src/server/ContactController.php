@@ -1,5 +1,12 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require 'vendor/autoload.php';
+
+$phpmailer = new PHPMailer(true);
+// $phpmailer->SMTPDebug = 1;
+
 $request = json_decode(file_get_contents('php://input'), true);
 $requestData = isset($request) ? $request : $_POST;
 
@@ -24,46 +31,66 @@ if( getValue("name") && getValue("mail") ){
 	$response["data"] = "Los campos Nombre y Email son requeridos.";
 	setHeaders(400);
 	echo json_encode($response);
-
 }
 
 function sendMail($name, $mail, $phone, $message, $type){
 	$message = createMessage($name, $mail, $phone, $message, $type);
-	$headers = createMailHeaders($mail);
 
-	$to = "maledr5@gmail.com, maledr5@hotmail.es, info@fiduamericas.com";
-    $subject = "Mensaje enviado desde fiduamericas.com";
-        
-    mail($to, $subject, $message, $headers);
+	$toList = array(
+		'Info' => 'info@fiduamericas.com',
+		'Paula Canaz' => 'pcanaz@fiduamericas.com',
+		'Juan Francisco Andrade' => 'jfandrade@fiduamericas.com',
+		'Prueba' => 'maledr5@gmail.com',
+	);
+    send($message, $toList);
+}
+
+function send($message, $toList){
+	global $phpmailer;
+
+	$phpmailer->Host       = "relay-hosting.secureserver.net";
+	$phpmailer->Port       = 25;
+	$phpmailer->SMTPDebug  = 0;
+	$phpmailer->SMTPSecure = "none";
+	$phpmailer->SMTPAuth   = false;
+	$phpmailer->Username   = "";
+	$phpmailer->Password   = "";
+
+	$phpmailer->From = 'info@fiduamericas.com';
+	$phpmailer->FromName= 'Formulario de contacto';
+	$phpmailer->Subject = 'Mensaje enviado desde fiduamericas.com';
+	$phpmailer->Body = $message;
+	$phpmailer->addReplyTo('info@fiduamericas.com', 'Informacion');
+
+	foreach ($toList as $name => $mailAddress) {
+		$phpmailer->addAddress($mailAddress, $name);
+	}
+
+	$phpmailer->isHTML(true);
+	$phpmailer->send();
 }
 
 function createMessage($name, $mail, $phone, $message, $type){
-	return 	"Mensaje enviado desde el formulario de contacto de fiduamericas.com con la siguiente información:\n" 
-            . "Nombre: " . $name . "\n"
-            . "Mail: " . $mail . "\n"
-            . "Teléfono: " . $phone . "\n"
-            . "Tipo de consulta: " . $type . "\n"
-            . "Mensaje o pregunta: " . $message . "\n";
-}
-
-function createMailHeaders($mail){
-	return 	"From: " . $mail . "\r\n"
-            .  "Reply-To: " . $mail . "\r\n"
-            .  "X-Mailer: PHP/"  .  phpversion();
+	return 	"Mensaje enviado desde el formulario de contacto de fiduamericas.com con la siguiente información:<br/>"
+            . "Nombre: " . $name . "<br/>"
+            . "Mail: " . $mail . "<br/>"
+            . "Teléfono: " . $phone . "<br/>"
+            . "Tipo de consulta: " . $type . "<br/>"
+            . "Mensaje o pregunta: " . $message . "<br/>";
 }
 
 function setHeaders($statusCode){
 	$httpStatus = array(
 		200 => 'OK',
-		400 => 'Bad Request',  
-		401 => 'Unauthorized',  
-		403 => 'Forbidden',  
-		404 => 'Not Found',  
-		405 => 'Method Not Allowed',  
-		408 => 'Request Timeout',  
-		500 => 'Internal Server Error',  
-		502 => 'Bad Gateway',  
-		503 => 'Service Unavailable',  
+		400 => 'Bad Request',
+		401 => 'Unauthorized',
+		403 => 'Forbidden',
+		404 => 'Not Found',
+		405 => 'Method Not Allowed',
+		408 => 'Request Timeout',
+		500 => 'Internal Server Error',
+		502 => 'Bad Gateway',
+		503 => 'Service Unavailable',
 		504 => 'Gateway Timeout'
 	);
 
@@ -77,8 +104,8 @@ function validateInput($inputName, $sanitizeFilter, $errorMessage) {
 		$filteredValue = filter_var($inputValue, $sanitizeFilter);
 		$value = $filteredValue ? $filteredValue : "El formato para este campo fue ingresado incorrectamente.";
 		return $value;
-	} 
-	else { 
+	}
+	else {
 		return $errorMessage;
 	}
 }
