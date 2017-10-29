@@ -36,11 +36,11 @@ if( getValue("name") && getValue("mail") ){
 function sendMail($name, $mail, $phone, $message, $type){
 	$message = createMessage($name, $mail, $phone, $message, $type);
 
+	// $toList = $arrayName = array('Test User' => 'maledr5@gmail.com');
 	$toList = array(
 		'Info' => 'info@fiduamericas.com',
 		'Paula Canaz' => 'pcanaz@fiduamericas.com',
-		'Juan Francisco Andrade' => 'jfandrade@fiduamericas.com',
-		'Prueba' => 'maledr5@gmail.com',
+		'Juan Francisco Andrade' => 'jfandrade@fiduamericas.com'
 	);
     send($message, $toList);
 }
@@ -67,6 +67,7 @@ function send($message, $toList){
 	}
 
 	$phpmailer->isHTML(true);
+	$phpmailer->CharSet = 'UTF-8';
 	$phpmailer->send();
 }
 
