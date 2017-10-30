@@ -37,6 +37,8 @@
 
 	@media #{$small-and-down} {
 		.page-header h3 { margin-bottom: 1em; }
+		.faq-answer { padding: 0 10px; }
+		.faq-question a h3 { margin: 10px 10px; }
 	}
 
 }

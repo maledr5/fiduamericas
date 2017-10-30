@@ -424,12 +424,18 @@ input[type=submit] {
 
 a.main-link,
 a.second-link {
-	display: block;
+	// display: block;
 	padding: 15px;
     width: 100%;
 	transition: all 0.3s;
 	text-align: center;
 	min-width: 250px;
+}
+
+@media #{$small-and-down} {
+	a.second-link {
+	    width: 100%;
+	}
 }
 
 a.main-link {
@@ -453,6 +459,7 @@ a.second-link {
 		min-width: 180px;
 		max-width: 250px;
 	}
+	span.border-box { max-width: 250px; }
 }
 
 a.main-link:hover,
@@ -516,7 +523,6 @@ a.second-link:hover {
 		margin-top: 40px;
 		margin-bottom: 0px;
 	}
-	#fondos-cta span,
 	#faq-cta span { margin-top: 0; }
 }
 
@@ -542,6 +548,7 @@ a.second-link:hover {
 
 	@media #{$small-and-down} {
 		margin-top: 40px;
+		@include align-items(center);
 		.actions {
 			padding: 0 1em;
 			@include flex-direction(column);

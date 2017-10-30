@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 class Header extends React.Component {
@@ -30,24 +31,24 @@ class Header extends React.Component {
                 <div className="nav-background"></div>
                 <ul className="navbar">
                   <li>
-                    <NavLink className="navbar-link" to="/nosotros" onClick={ this.unCheck } >
-                    Quienes somos</NavLink>
+                    <Link className="navbar-link" to="/nosotros#header" onClick={ this.unCheck } >
+                    Quienes somos</Link>
                   </li>
                   <li>
-                    <NavLink className="navbar-link" to="/fideicomisos"onClick={ this.unCheck } >
-                    Negocios Fiduciarios</NavLink>
+                    <Link className="navbar-link" to="/fideicomisos#header"onClick={ this.unCheck } >
+                    Negocios Fiduciarios</Link>
                   </li>
                   <li>
-                    <NavLink className="navbar-link" to="/fondos" onClick={ this.unCheck } >
-                    Fondos</NavLink>
+                    <Link className="navbar-link" to="/fondos#header" onClick={ this.unCheck } >
+                    Fondos</Link>
                   </li>
                   <li>
-                    <NavLink className="navbar-link" to="/faq" onClick={ this.unCheck } >
-                    FAQ</NavLink>
+                    <Link className="navbar-link" to="/faq#header" onClick={ this.unCheck } >
+                    FAQ</Link>
                   </li>
                   <li>
-                    <NavLink className="navbar-link" to="/contacto" onClick={ this.unCheck } >
-                    Contacto</NavLink>
+                    <Link className="navbar-link" to="/contacto#header" onClick={ this.unCheck } >
+                    Contacto</Link>
                   </li>
                 </ul>
               </nav>
