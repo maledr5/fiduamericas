@@ -17,7 +17,7 @@ npm run server
 With python, port 8000:
 
 ```
-cd src/client/public 
+cd src/client/public
 python -m SimpleHTTPServer
 ```
 

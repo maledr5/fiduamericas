@@ -15,14 +15,14 @@ const Fondos = () => {
 					<div className="border-box box-light text-dark">
 						<div className="nos-quote">
 							<div className="quote-main quote-icon"></div>
-							<p className="main"> El camino a la prosperidad depende fundamentalmente de dos palabras: 
+							<p className="main"> El camino a la prosperidad depende fundamentalmente de dos palabras:
 							<br/> trabajo y ahorro </p>
 							<p className="second text-main">Benjamin Franklin</p>
 						</div>
 					</div>
 				</div>
 			</div>
-	
+
 			<div id="fondos-cta" className="container">
 				<div className="row">
 					<span className="col l4 m6 s10 offset-s1 offset-l7 border-box box-main">
@@ -33,7 +33,7 @@ const Fondos = () => {
 					</span>
 				</div>
 			</div>
-	
+
 			<div id="fondos-como">
 				<div className="content">
 					<h3>¿Cómo funciona un fondo de inversión?</h3>
@@ -43,7 +43,7 @@ const Fondos = () => {
 
 				<div className="fondos-como-img"></div>
 			</div>
-	
+
 			<div id="fondos-lista" className="container">
 				<h3 className="text-main">Nuestros Fondos de Inversión</h3>
 				<div className="product-container box-light-grey">

@@ -79,7 +79,7 @@ const Fideicomisos = () => {
 				<div className="full-screen banner-height banner-fideicomisos-bg parallax">
 					<div>
 						<h3 className=" text-light">¿Cuáles son las ventajas de los Fideicomisos?</h3>
-						<ul className=" text-light"> 
+						<ul className=" text-light">
 							<li>Confidencialidad</li>
 							<li>Facilita la gestión sobre bienes</li>
 							<li>Administración especializada y técnica</li>
@@ -89,7 +89,7 @@ const Fideicomisos = () => {
 					<img src={fideicomiso_ventajas} />
 				</div>
 			</div>
-			
+
 			<div id="fid-negocios" className="container">
 				<h3 className="text-main">Negocios Fiduciarios</h3>
 				<p className="text-dark">Son negocios de confianza que sirven para cumplir las instrucciones de un mandante por medio de un tercero.</p>

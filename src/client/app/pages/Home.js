@@ -33,7 +33,7 @@ const Home = () => {
 				</div>
 				<img src={fondos} />
 			</div>
-			
+
 			<div id="home-info-fondos" className="container">
 				<div className="row">
 					<div id="quote" className="col l6 offset-l3">
@@ -54,7 +54,7 @@ const Home = () => {
 				</div>
 				<img src={fideicomisos} />
 			</div>
-			
+
 			<div id="home-info-fideicomisos" className="container">
 				<div className="row">
 					<div id="quote" className="col l6 offset-l3">

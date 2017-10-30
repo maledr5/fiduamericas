@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class ProductsCards extends Component {
 	render() {
-		return <div>{this._buildProducts()}</div>	
+		return <div>{this._buildProducts()}</div>
 	}
 
 	_buildProducts() {
@@ -16,7 +16,7 @@ class ProductsCards extends Component {
  			)
 		});
 	}
-		
+
 }
 
 export default ProductsCards

@@ -49,7 +49,7 @@ const Nosotros = () => {
 							<h3>Eficiencia</h3>
 							<p>Gestionamos con rapidez los requerimientos de nuestros clientes. Nos preocupamos por conocerlos, así como de sus necesidades.</p>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>

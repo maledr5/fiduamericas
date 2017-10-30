@@ -14,7 +14,7 @@ const Resoluciones = () => {
 					<div className="col offset-s1 header-division"></div>
 				</div>
 			</div>
-		
+
 			<div id="resoluciones">
 				<div className="container">
 					<div className="row link-row">

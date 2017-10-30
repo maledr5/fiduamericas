@@ -6,7 +6,7 @@
 #resoluciones {
 
 	margin-bottom: 50px;
-	
+
 	.row.link-row {
 		@extend %flexbox;
 	    @include flex-direction();
