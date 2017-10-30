@@ -103,6 +103,11 @@ nav {
 			background: none;
 		}
 
+		a.active, {
+			color: $main-opacity!important;
+			background-color: $sec-color;
+		}
+
 		[type="checkbox"]:checked ~ ul {
 	  		display: block;
 	  		z-index: 10;
