@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack -d --watch",
     "build": "webpack -p",
-    "server": "webpack -d && webpack-dev-server --content-base src/client/public"
+    "server": "webpack -d && webpack-dev-server --content-base src/client/public --host 0.0.0.0 --port 3030"
   },
   "repository": {
     "type": "git",
