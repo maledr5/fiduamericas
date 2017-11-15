@@ -17,6 +17,9 @@ const Resoluciones = () => {
 
 			<div id="resoluciones">
 				<div className="container">
+					<div className="row">
+						<p className="col offset-s1 second">A continuación, encontrará información y documentación relevante:</p>
+					</div>
 					<div className="row link-row">
 						<span className="col offset-s1 pdf-icon"></span>
 						<a href={resoluciones_01} className="" target="_blank">Certificado de Inscripción</a>
