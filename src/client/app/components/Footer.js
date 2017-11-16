@@ -17,7 +17,7 @@ const Footer = () => {
 					<div className="col l3 m5 s12 download-links">
 						<Link to="/resoluciones#header" className="button-light block-display">Resoluciones</Link>
 						<a href={tarifario} className="button-light block-display" target="_blank">Tarifario</a>
-						<a className="button-light block-display">Marco Legal</a>
+						<Link to="/marcolegal#header" className="button-light block-display">Marco Legal</Link>
 					</div>
 					<div className="col l1 m1 border-right"></div>
 					<div className="col l4 m6 s12 contact-details-container cotact-details-ligth text-light">
