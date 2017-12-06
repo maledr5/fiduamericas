@@ -23,15 +23,15 @@ const Resoluciones = () => {
 					</div>
 					<div className="row link-row">
 						<span className="col offset-s1 pdf-icon"></span>
-						<a href={resoluciones_01} className="" target="_blank">Certificado de Inscripción</a>
+						<a href={resoluciones_01} className="pdf-link" target="_blank">Certificado de Inscripción</a>
 					</div>
 					<div className="row link-row">
 						<span className="col offset-s1 pdf-icon"></span>
-						<a href={resoluciones_02} className="" target="_blank">Resolución 20135</a>
+						<a href={resoluciones_02} className="pdf-link" target="_blank">Resolución 20135</a>
 					</div>
 					<div className="row link-row">
 						<span className="col offset-s1 pdf-icon"></span>
-						<a href={resoluciones_03} className="" target="_blank">Resolución 23710</a>
+						<a href={resoluciones_03} className="pdf-link" target="_blank">Resolución Aprobación Fondo Fit</a>
 					</div>
 				</div>
 			</div>

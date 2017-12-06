@@ -12,7 +12,7 @@ class ContactoCta extends React.Component {
 	render (){
 		const productCta = this.props.productCta;
 		const CurrentProduct = this.props.CurrentProduct;
-		let linkTo = "/" + productCta + "#header";
+		let linkTo = "/" + productCta;
 		return (
 			<div id="contacto-cta">
 				<h5 className="center-text">¿NECESITAS MÁS INFORMACIÓN?</h5>
@@ -27,9 +27,9 @@ class ContactoCta extends React.Component {
 							<Link to={"/contacto?product=" + CurrentProduct} className="main-link">Formulario de Contacto</Link>
 						</span>
 					</div>
-					<div className="hidden">
+					<div className="">
 						<span className="border-box box-dark">
-							<Link to="/faq#header" className="main-link">Preguntas Frecuentes</Link>
+							<Link to="/faq" className="main-link">Preguntas Frecuentes</Link>
 						</span>
 					</div>
 				</div>

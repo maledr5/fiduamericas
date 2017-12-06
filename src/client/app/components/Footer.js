@@ -15,9 +15,9 @@ const Footer = () => {
 			<div className="container">
 				<div className="row">
 					<div className="col l3 m5 s12 download-links">
-						<Link to="/resoluciones#header" className="button-light block-display">Resoluciones</Link>
+						<Link to="/resoluciones" className="button-light block-display">Resoluciones</Link>
 						<a href={tarifario} className="button-light block-display" target="_blank">Tarifario</a>
-						<Link to="/marcolegal#header" className="button-light block-display">Marco Legal</Link>
+						<Link to="/marcolegal" className="button-light block-display">Marco Legal</Link>
 					</div>
 					<div className="col l1 m1 border-right"></div>
 					<div className="col l4 m6 s12 contact-details-container cotact-details-ligth text-light">
@@ -31,11 +31,11 @@ const Footer = () => {
 			</div>
 		</div>
 		<div className="footer-navbar">
-			<Link to="/nosotros#header" className="navbar-link">Quienes somos</Link>
-			<Link to="/fideicomisos#header" className="navbar-link">Negocios Fiduciarios</Link>
-			<Link to="/fondos#header" className="navbar-link">Fondos</Link>
-			<Link to="/faq#header" className="navbar-link">FAQ</Link>
-			<Link to="/contacto#header" className="navbar-link">Contacto</Link>
+			<Link to="/nosotros" className="navbar-link">Quienes somos</Link>
+			<Link to="/fideicomisos" className="navbar-link">Negocios Fiduciarios</Link>
+			<Link to="/fondos" className="navbar-link">Fondos</Link>
+			<Link to="/faq" className="navbar-link">FAQ</Link>
+			<Link to="/contacto" className="navbar-link">Contacto</Link>
 		</div>
     </footer>
   );

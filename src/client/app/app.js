@@ -1,5 +1,6 @@
 import React from 'react';
 import {HashRouter, Route, Link} from 'react-router-dom';
+import ScrollToTop from './ScrollToTop';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -15,6 +16,7 @@ import MarcoLegal from './pages/MarcoLegal';
 
 const App = () =>
     <HashRouter>
+    <ScrollToTop>
       <div className="app">
 
         <Header />
@@ -32,6 +34,7 @@ const App = () =>
         <Footer />
 
       </div>
+      </ScrollToTop>
     </HashRouter>;
 
 

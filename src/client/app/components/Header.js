@@ -31,23 +31,23 @@ class Header extends React.Component {
                 <div className="nav-background"></div>
                 <ul className="navbar">
                   <li>
-                    <Link className="navbar-link" to="/nosotros#header" onClick={ this.unCheck } >
+                    <Link className="navbar-link" to="/nosotros" onClick={ this.unCheck } >
                     Quienes somos</Link>
                   </li>
                   <li>
-                    <Link className="navbar-link" to="/fideicomisos#header"onClick={ this.unCheck } >
+                    <Link className="navbar-link" to="/fideicomisos"onClick={ this.unCheck } >
                     Negocios Fiduciarios</Link>
                   </li>
                   <li>
-                    <Link className="navbar-link" to="/fondos#header" onClick={ this.unCheck } >
+                    <Link className="navbar-link" to="/fondos" onClick={ this.unCheck } >
                     Fondos</Link>
                   </li>
                   <li>
-                    <Link className="navbar-link" to="/faq#header" onClick={ this.unCheck } >
+                    <Link className="navbar-link" to="/faq" onClick={ this.unCheck } >
                     FAQ</Link>
                   </li>
                   <li>
-                    <Link className="navbar-link" to="/contacto#header" onClick={ this.unCheck } >
+                    <Link className="navbar-link" to="/contacto" onClick={ this.unCheck } >
                     Contacto</Link>
                   </li>
                 </ul>
