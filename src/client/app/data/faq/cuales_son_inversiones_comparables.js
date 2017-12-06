@@ -1,4 +1,4 @@
-gimport React from 'react';
+import React from 'react';
 
 import FaqQuestion from '../../components/FaqQuestion.js'
 
