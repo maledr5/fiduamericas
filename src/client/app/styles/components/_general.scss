@@ -373,7 +373,9 @@ a:focus {
 }
 
 .active {
-	color: $alternate-color!important;
+	color: $third-color!important;
+	border-bottom: solid 1px $third-color;
+    padding-bottom: 8px;
 }
 
 .button-light,
