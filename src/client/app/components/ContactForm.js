@@ -88,8 +88,8 @@ class ContactoForm extends React.Component {
 					<div className="container">
 					{this.state.isMainMessageSent ?
 						<div className="row form-response">
-							<img src={sentIcon} className="col s2 offset-s4 icon-sent"></img>
-							<p className="col s2">Gracias por su mensaje. Nos contactaremos pronto con usted.</p>
+							<img src={sentIcon} className="col s6 offset-s3 l2 offset-l4 icon-sent"></img>
+							<p className="col s8 offset-s2 l2 ">Gracias por su mensaje. Nos contactaremos pronto con usted.</p>
 						</div>
 						:
 						<div>

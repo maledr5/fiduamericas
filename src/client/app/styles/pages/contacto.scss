@@ -23,6 +23,9 @@
 		width: 200px;
 		height: 100px;
 	}
+	@media #{$small-and-down} {
+		p { text-align:center; }
+	}
 }
 
 footer .form-response {

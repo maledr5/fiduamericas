@@ -39,7 +39,7 @@ const Home = () => {
 					<div id="quote" className="col l6 offset-l3">
 						<div className="quote-dark quote-icon"></div>
 						<div className="quote-phrase">
-							<p className="second text-dark">Me encanta como con un fondo de inversión incrementa mi rendimiento comparado con una cuenta de ahorros en un banco.</p>
+							<p className="second text-dark">Me encanta cómo con un fondo de inversión incrementa mi rendimiento comparado con una cuenta de ahorros en un banco.</p>
 							<h3 className="text-dark">Francisco S. Lasso</h3>
 						</div>
 					</div>

@@ -32,7 +32,7 @@ class Header extends React.Component {
                 <ul className="navbar">
                   <li>
                     <NavLink className="navbar-link" to="/nosotros" onClick={ this.unCheck } >
-                    Quienes somos</NavLink>
+                    Quiénes somos</NavLink>
                   </li>
                   <li>
                     <NavLink className="navbar-link" to="/fideicomisos"onClick={ this.unCheck } >
