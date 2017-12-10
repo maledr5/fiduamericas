@@ -39,10 +39,16 @@ const Footer = () => {
 			<Link to="/faq" className="navbar-link">FAQ</Link>
 			<Link to="/contacto" className="navbar-link">Contacto</Link>
 		</div>
-		<div className="footer-copy"> ©️ Fiduamericas 2017 | Todos los derechos reservados. </div>
-		<div className="footer-copy"> Some icons and images were taken but modified from
-			&nbsp;<a href="www.freepick.com">Freepik</a> &nbsp; and
-			&nbsp;<a href="www.flaticon.com">Flaticon</a> </div>
+		<div className="footer-copy">
+			<i className="material-icons md-light md-18">copyright</i>
+			&nbsp;Fiduamericas 2017.
+		</div>
+		<div className="footer-copy">
+			<p>Some icons and images were taken but modified from
+				&nbsp;<a href="www.freepick.com">Freepik</a> and
+				&nbsp;<a href="www.flaticon.com">Flaticon</a>
+			</p>
+		</div>
     </footer>
   );
 };

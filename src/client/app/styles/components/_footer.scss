@@ -68,18 +68,21 @@ footer {
 	}
 
 	div.footer-copy {
+		text-align: center;
 		background-color: $main-color;
 		@extend %flexbox;
 	    @include justify-content(center);
-	    padding: 5px 266px!important;
+	    padding: 0 15px;
 	    color: $white!important;
-	}
-
-	div.footer-copy a {
-		color:white;
-		opacity:0.7;
-		:hover {
-			opacity: 0.5;
+	    a {
+			color:white;
+			opacity:0.7;
+			:hover {
+				opacity: 0.5;
+			}
+		}
+		i{
+			margin-top:8px;
 		}
 	}
 
