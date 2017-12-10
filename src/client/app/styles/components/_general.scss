@@ -92,7 +92,8 @@ h5 {
 }
 
 @media #{$small-and-down} {
-	h5 {font-size: 1.8em;}
+	h5 { font-size: 1.8em; }
+	h2 { font-size: 1.8em; }
 }
 
 p {

@@ -41,10 +41,35 @@
 	}
 }
 
+.text-banner-home {
+    background-color: #f0f8ff69;
+    padding: 20px 40px 20px 130px;
+}
+
 #home-info-fondos,
 #home-info-fideicomisos {
 	margin: 140px auto;
 }
+
+.banner-home.justify-end {
+	@include justify-content(flex-end);
+}
+
+.banner-home.justify-end .text-banner-home {
+	padding: 20px 130px 20px 40px;
+}
+
+@media #{$medium-and-down} {
+	.text-banner-home,
+	.banner-home.justify-end .text-banner-home {
+		padding: 0px 0px 0px 50px;
+	}
+	.banner-home h2,
+	.banner-home p {
+		width: 80%;
+	}
+}
+
 
 #home-fondos,
 #home-fideicomisos {
@@ -91,7 +116,7 @@
 			margin-right: 0;
 			padding: 20px;
 		}
-		img{ width: 135%; }
+		img{ width: 100%; }
 		@include align-items(center);
 	}
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 
+import ScrollButton from '../components/ScrollButton.js'
 import ContactForm from '../components/ContactForm.js'
 import ContactDetails from '../components/ContactDetails.js'
 
@@ -11,6 +12,7 @@ import tarifario from '../data/downloads/tarifario.pdf'
 const Footer = () => {
   return (
     <footer>
+		<ScrollButton scrollStepInPx="50" delayInMs="16.66"/>
 		<div className="footer-info">
 			<div className="container">
 				<div className="row">
@@ -31,12 +33,16 @@ const Footer = () => {
 			</div>
 		</div>
 		<div className="footer-navbar">
-			<Link to="/nosotros" className="navbar-link">Quienes somos</Link>
+			<Link to="/nosotros" className="navbar-link">Quiénes somos</Link>
 			<Link to="/fideicomisos" className="navbar-link">Negocios Fiduciarios</Link>
 			<Link to="/fondos" className="navbar-link">Fondos</Link>
 			<Link to="/faq" className="navbar-link">FAQ</Link>
 			<Link to="/contacto" className="navbar-link">Contacto</Link>
 		</div>
+		<div className="footer-copy"> ©️ Fiduamericas 2017 | Todos los derechos reservados. </div>
+		<div className="footer-copy"> Some icons and images were taken but modified from
+			&nbsp;<a href="www.freepick.com">Freepik</a> &nbsp; and
+			&nbsp;<a href="www.flaticon.com">Flaticon</a> </div>
     </footer>
   );
 };

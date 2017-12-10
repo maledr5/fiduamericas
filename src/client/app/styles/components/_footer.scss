@@ -67,6 +67,22 @@ footer {
 	    color: $main-opacity!important;
 	}
 
+	div.footer-copy {
+		background-color: $main-color;
+		@extend %flexbox;
+	    @include justify-content(center);
+	    padding: 5px 266px!important;
+	    color: $white!important;
+	}
+
+	div.footer-copy a {
+		color:white;
+		opacity:0.7;
+		:hover {
+			opacity: 0.5;
+		}
+	}
+
 	@media #{$medium-and-down} {
 		div.footer-navbar {
 			padding: 20px 100px!important;
