@@ -41,10 +41,6 @@ const Faq = () => {
 
 			<div className="row">
 
-				<div className="col offset-l1 l10">
-					{ cuales_son_las_funciones_de_fiduamericas }
-				</div>
-
 				<h2 id="faq-fondos" className="col offset-l1 text-dark"> Fondos de Inversión </h2>
 
 				<div className="col offset-l1 l10">
@@ -61,8 +57,8 @@ const Faq = () => {
 					{ que_significa_fideicomiso }
 					{ que_significa_negocio_fiduciario }
 					{ quien_interviene_en_un_negocio_fiduciario }
-					{ que_tipos_de_negocios_fiduciarios_existen }
 					{ quienes_pueden_ser_parte_de_un_negocio_fiduciario }
+					{ cuales_son_las_funciones_de_fiduamericas }
 					{ cuales_son_los_beneficios_de_constituir_un_fideicomiso }
 				</div>
 
