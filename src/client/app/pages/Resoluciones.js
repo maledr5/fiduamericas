@@ -27,7 +27,7 @@ const Resoluciones = () => {
 					</div>
 					<div className="row link-row">
 						<span className="col offset-s1 pdf-icon"></span>
-						<a href={resoluciones_02} className="pdf-link" target="_blank">Resolución 20135</a>
+						<a href={resoluciones_02} className="pdf-link" target="_blank">Resolución Autorización Fiduamericas</a>
 					</div>
 					<div className="row link-row">
 						<span className="col offset-s1 pdf-icon"></span>

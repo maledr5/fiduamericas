@@ -636,6 +636,10 @@ select:focus {
 	-mox-box-shadow: none;
 }
 
+input:required {
+    box-shadow:none;
+}
+
 select:-moz-focusring {
 	color: transparent;
 	text-shadow: 0 0 0 #0057a2;
