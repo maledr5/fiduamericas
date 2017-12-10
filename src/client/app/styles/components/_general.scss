@@ -189,6 +189,10 @@ p.normal {
 @media #{$medium-and-down} { .page-header { padding: 20px 0; } }
 @media #{$small-and-down} { .page-header { padding: 0; } }
 
+.flex-center {
+	@extend %flexbox;
+	@include justify-content(space-around);
+}
 // x. Carousel banner dots
 // ==========================================================================
 
@@ -500,6 +504,10 @@ a.second-link:hover {
     display: flex;
     padding: 5px!important;
     margin-bottom: 20px;
+}
+
+.scroll-button {
+	margin-bottom: 20px;
 }
 
 // 2. CTAs

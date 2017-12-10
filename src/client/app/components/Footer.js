@@ -12,8 +12,8 @@ import tarifario from '../data/downloads/tarifario.pdf'
 const Footer = () => {
   return (
     <footer>
-		<ScrollButton scrollStepInPx="50" delayInMs="16.66"/>
 		<div className="footer-info">
+			<ScrollButton scrollStepInPx="50" delayInMs="16.66"/>
 			<div className="container">
 				<div className="row">
 					<div className="col l3 m5 s12 download-links">
