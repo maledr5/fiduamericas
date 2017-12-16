@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { hashHistory } from 'react-router'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
+import { Router, Route, Link } from 'react-router-dom'
+import createBrowserHistory from 'history/createBrowserHistory'
 import ScrollToTop from './ScrollToTop';
 
 import Header from './components/Header';
@@ -20,9 +17,12 @@ import Contacto from './pages/Contacto';
 import Resoluciones from './pages/Resoluciones';
 import MarcoLegal from './pages/MarcoLegal';
 
+
+const customHistory = createBrowserHistory()
+
 const App = () =>
 
-    <Router history={hashHistory}>
+    <Router history={customHistory}>
         <ScrollToTop>
         <div className="app">
             <Header />
