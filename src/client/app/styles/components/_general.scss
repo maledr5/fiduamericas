@@ -453,7 +453,13 @@ a.second-link {
 	color: $main-color;
 	border: 1px solid $main-color;
     position: relative;
-    bottom: 15px;
+    // bottom: 15px;
+}
+
+#home-fondos a.second-link,
+#home-fideicomisos a.second-link,
+#fid-banner a.second-link {
+	bottom: 15px;
 }
 
 @media #{$medium-and-down} {

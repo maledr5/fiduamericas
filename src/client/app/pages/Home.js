@@ -10,7 +10,7 @@ import fideicomisos from '../images/home_fideicomisos_2.jpg'
 
 const Home = () => {
 	return (
-		<div>
+		<div id="home">
 
 			<div id="home-banner"><Carousel /></div>
 

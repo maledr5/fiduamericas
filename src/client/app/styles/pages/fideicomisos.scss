@@ -159,6 +159,10 @@
 		@include align-items(center);
 		> div { @include justify-content(center); }
 	}
+	p { margin-bottom:20px; }
+	a.second-link {
+	    display: inline-block;
+	}
 }
 
 // Remove this lines when changes needed
