@@ -65,6 +65,11 @@ footer {
 	    @include justify-content(space-around);
 	    padding: 20px 266px!important;
 	    color: $main-opacity!important;
+	    a.active {
+	    	color:$white !important;
+	    	opacity:0.7 !important;
+	    	border: 0 !important;
+	    }
 	}
 
 	div.footer-copy {

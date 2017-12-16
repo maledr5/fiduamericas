@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 
 import ContactoCta from '../components/ContactoCta.js'
 
@@ -26,10 +26,10 @@ const Fondos = () => {
 			<div id="fondos-cta" className="container">
 				<div className="row">
 					<span className="col l4 m6 s10 offset-s2 offset-l7 border-box box-main">
-                		<Link to="#fondos-como" className="main-link">¿Cómo funciona un fondo?</Link>
+                		<HashLink to="#fondos-como" className="main-link">¿Cómo funciona un fondo?</HashLink>
 					</span>
 					<span className="col l4 m6 s10 offset-s1 offset-l1 border-box box-main">
-						<Link to="#fondos-lista" className="main-link">Conoce nuestros fondos de inversión</Link>
+						<HashLink to="#fondos-lista" className="main-link">Conoce nuestros fondos de inversión</HashLink>
 					</span>
 				</div>
 			</div>

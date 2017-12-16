@@ -1,5 +1,6 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
+
 import ProductsCards from '../components/ProductsCards.js'
 import ContactoCta from '../components/ContactoCta.js'
 
@@ -20,7 +21,7 @@ const Fideicomisos = () => {
 				 <h3 className="text-main">¿Qué es un Fideicomiso?</h3>
 				 <p className="second text-dark">Es un patrimonio autónomo, con personalidad jurídica, cuyos activos y recursos están vinculados al cumplimiento de un objeto determinado en el contrato.</p>
 				 <br/>
-				 <Link to="#fid-negocios" className="second-link">Ver Negocios Fiduciarios</Link>
+				 <HashLink to="#fid-negocios" className="second-link">Ver Negocios Fiduciarios</HashLink>
 				 <br/><br/>
 				 <h3 className="text-main">Las partes que intervienen en un fideicomiso son:</h3>
 			</div>

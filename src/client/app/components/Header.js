@@ -1,7 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { HashLink as Link } from 'react-router-hash-link';
-
+import { NavLink as Link } from 'react-router-dom';
 
 class Header extends React.Component {
 
@@ -25,35 +23,36 @@ class Header extends React.Component {
         <header id="header">
           <nav className="container">
             <div className="main-header row">
-              <NavLink className="col l3 brand" to="/home"></NavLink>
+              <Link className="col l3 brand" to="/home" activeClassName=""></Link>
               <nav className="col l8 offset-l2">
                 <input type="checkbox" id="nav" checked={ this.state.isChecked } onChange={ this.handleChecked }/><label htmlFor="nav"></label>
                 <div className="nav-background"></div>
                 <ul className="navbar">
                   <li>
-                    <NavLink className="navbar-link" to="/nosotros" onClick={ this.unCheck } >
-                    Quiénes somos</NavLink>
+                    <Link className="navbar-link" to="/nosotros" activeClassName="active" >
+                    Quiénes somos</Link>
                   </li>
                   <li>
-                    <NavLink className="navbar-link" to="/fideicomisos"onClick={ this.unCheck } >
-                    Negocios Fiduciarios</NavLink>
+                    <Link className="navbar-link" to="/fideicomisos" activeClassName="active" >
+                    Negocios Fiduciarios</Link>
                   </li>
                   <li>
-                    <NavLink className="navbar-link" to="/fondos" onClick={ this.unCheck } >
-                    Fondos</NavLink>
+                    <Link className="navbar-link" to="/fondos" activeClassName="active" >
+                    Fondos</Link>
                   </li>
                   <li>
-                    <NavLink className="navbar-link" to="/faq" onClick={ this.unCheck } >
-                    FAQ</NavLink>
+                    <Link className="navbar-link" to="/faq" activeClassName="active" >
+                    FAQ</Link>
                   </li>
                   <li>
-                    <NavLink className="navbar-link" to="/contacto" onClick={ this.unCheck } >
-                    Contacto</NavLink>
+                    <Link className="navbar-link" to="/contacto" activeClassName="active" >
+                    Contacto</Link>
                   </li>
                 </ul>
               </nav>
             </div>
           </nav>
+          {this.props.children}
         </header>
       );
     }

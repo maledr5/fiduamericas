@@ -4,9 +4,6 @@ import ContactForm from '../components/ContactForm.js'
 import ContactDetails from '../components/ContactDetails.js'
 import CustomMap from '../components/CustomMap.js'
 
-import { scrollTop } from '../helpers.js'
-
-
 class Contacto extends React.Component {
 
 	constructor(props) {
@@ -23,7 +20,6 @@ class Contacto extends React.Component {
 	}
 
 	render() {
-		scrollTop()
 		return (
 			<div id="contacto">
 				<ContactForm formType="main" defaultType={this.getDefaultType(this.props.location)}/>

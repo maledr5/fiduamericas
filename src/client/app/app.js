@@ -1,5 +1,11 @@
 import React from 'react';
-import {HashRouter, Route, Link} from 'react-router-dom';
+import ReactDOM from 'react-dom';
+import { hashHistory } from 'react-router'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 import ScrollToTop from './ScrollToTop';
 
 import Header from './components/Header';
@@ -15,27 +21,25 @@ import Resoluciones from './pages/Resoluciones';
 import MarcoLegal from './pages/MarcoLegal';
 
 const App = () =>
-    <HashRouter>
-    <ScrollToTop>
-      <div className="app">
 
-        <Header />
+    <Router history={hashHistory}>
+        <ScrollToTop>
+        <div className="app">
+            <Header />
 
-        <Route exact path="/" component={Home} />
-        <Route exact path="/home" component={Home} />
-        <Route exact path="/nosotros" component={Nosotros} />
-        <Route exact path="/fideicomisos" component={Fideicomisos} />
-        <Route exact path="/fondos" component={Fondos} />
-        <Route exact path="/faq" component={Faq} />
-        <Route exact path="/contacto" component={Contacto} />
-        <Route exact path="/resoluciones" component={Resoluciones} />
-        <Route exact path="/marcolegal" component={MarcoLegal} />
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/nosotros" component={Nosotros} />
+            <Route exact path="/fideicomisos" component={Fideicomisos} />
+            <Route exact path="/fondos" component={Fondos} />
+            <Route exact path="/faq" component={Faq} />
+            <Route exact path="/contacto" component={Contacto} />
+            <Route exact path="/resoluciones" component={Resoluciones} />
+            <Route exact path="/marcolegal" component={MarcoLegal} />
 
-        <Footer />
-
-      </div>
-      </ScrollToTop>
-    </HashRouter>;
-
+            <Footer />
+        </div>
+        </ScrollToTop>
+    </Router>
 
 export default App;

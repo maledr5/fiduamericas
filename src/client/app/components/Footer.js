@@ -1,13 +1,11 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { HashLink as Link } from 'react-router-hash-link';
+import { NavLink as Link } from 'react-router-dom';
 
 import ScrollButton from '../components/ScrollButton.js'
 import ContactForm from '../components/ContactForm.js'
 import ContactDetails from '../components/ContactDetails.js'
 
 import tarifario from '../data/downloads/tarifario.pdf'
-
 
 const Footer = () => {
   return (
@@ -33,11 +31,11 @@ const Footer = () => {
 			</div>
 		</div>
 		<div className="footer-navbar">
-			<Link to="/nosotros" className="navbar-link">Quiénes somos</Link>
-			<Link to="/fideicomisos" className="navbar-link">Negocios Fiduciarios</Link>
-			<Link to="/fondos" className="navbar-link">Fondos</Link>
-			<Link to="/faq" className="navbar-link">FAQ</Link>
-			<Link to="/contacto" className="navbar-link">Contacto</Link>
+			<Link to="/nosotros" className="navbar-link" activeClassName="active" >Quiénes somos</Link>
+			<Link to="/fideicomisos" className="navbar-link" activeClassName="active" >Negocios Fiduciarios</Link>
+			<Link to="/fondos" className="navbar-link" activeClassName="active" >Fondos</Link>
+			<Link to="/faq" className="navbar-link" activeClassName="active" >FAQ</Link>
+			<Link to="/contacto" className="navbar-link" activeClassName="active" >Contacto</Link>
 		</div>
 		<div className="footer-copy">
 			<i className="material-icons md-light md-18">copyright</i>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
+import { NavLink as Link } from 'react-router-dom';
 
 
 class ContactoCta extends React.Component {
