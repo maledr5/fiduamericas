@@ -60,6 +60,7 @@ const Faq = () => {
 					{ quienes_pueden_ser_parte_de_un_negocio_fiduciario }
 					{ cuales_son_las_funciones_de_fiduamericas }
 					{ cuales_son_los_beneficios_de_constituir_un_fideicomiso }
+					{ que_tipos_de_negocios_fiduciarios_existen }
 				</div>
 
 			</div>

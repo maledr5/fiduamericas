@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 import FaqQuestion from '../../components/FaqQuestion.js'
 
@@ -19,11 +20,9 @@ const answer =
 		<li><strong>Responsabilidad </strong>fiscal: quiere decir que de acuerdo con la legislación tributaria los fideicomisos son sociedades, por lo que tienen la misma responsabilidad que estos entes. </li>
 		<li><strong>Onerosidad:</strong> significa que por su gestión el fiduciario debe recibir un honorario. </li>
 	</ul>
-
-	<p className="second text-sec">2. Encargo Fiduciario</p>
-	<p>Es el contrato por medio el cual acuerdo una o más personas llamadas CONSTITUYENTES, dan instrucciones de manera temporal e irrevocable, para que la FIDUCIARIA cumpla con las finalidades específicas señaladas en el a favor del BENEFICIARIO. En este contrato no se crea un ente con personalidad jurídica, no existe transferencia de dominio y las instrucciones dadas son básicamente de tenencia, custodia y en general obligaciones de hacer. </p>
-	<img src="" />
-</div>; // TODO: Missing image
+	<br/>
+	<HashLink className="second-link" to="fideicomisos#fid-negocios">Ver más Negocios Fiduciarios</HashLink>
+</div>;
 
 const faqQuestion =
 <FaqQuestion
