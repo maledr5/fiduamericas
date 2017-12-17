@@ -26,3 +26,15 @@
 	    flex-basis: 310px;
 	}
 }
+
+#fid-info {
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    -webkit-hyphens: none !important;
+    hyphens: none !important;
+	img {
+		width: 100%;
+		max-width: 800px;
+	}
+	p { padding: 0 }
+}

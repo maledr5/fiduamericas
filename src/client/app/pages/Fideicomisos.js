@@ -94,7 +94,7 @@ const Fideicomisos = () => {
 			<div id="fid-negocios" className="container">
 				<h3 className="text-main">Negocios Fiduciarios</h3>
 				<p className="text-dark">Son negocios de confianza que sirven para cumplir las instrucciones de un mandante por medio de un tercero.</p>
-				<ProductsCards products={fideicomisosData()} />
+				<ProductsCards products={fideicomisosData()} type="fideicomisos" />
 			</div>
 
 			<ContactoCta productCta="fondos" CurrentProduct="fideicomisos"/>

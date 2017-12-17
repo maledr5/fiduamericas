@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { hashHistory } from 'react-router'
-import { Router, Route, Link } from 'react-router-dom'
+import { Router, Route } from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 import ScrollToTop from './ScrollToTop';
 
@@ -11,6 +10,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Nosotros from './pages/Nosotros';
 import Fideicomisos from './pages/Fideicomisos';
+import ProductCard from './components/ProductCard';
 import Fondos from './pages/Fondos';
 import Faq from './pages/Faq';
 import Contacto from './pages/Contacto';
@@ -36,6 +36,8 @@ const App = () =>
             <Route exact path="/contacto" component={Contacto} />
             <Route exact path="/resoluciones" component={Resoluciones} />
             <Route exact path="/marcolegal" component={MarcoLegal} />
+
+            <Route exact path="/fideicomisos/:name" component={ProductCard}/>
 
             <Footer />
         </div>
