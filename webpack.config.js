@@ -29,7 +29,7 @@ var config = {
         test: /\.(png|jpg|gif|svg|pdf)$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {}
           }
         ]
