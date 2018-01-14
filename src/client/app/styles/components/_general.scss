@@ -471,6 +471,9 @@ a.second-link {
 	text-align: center;
 	min-width: 250px;
 }
+a.second-link {
+	margin-bottom: 10px;
+}
 
 @media #{$small-and-down} {
 	a.second-link {

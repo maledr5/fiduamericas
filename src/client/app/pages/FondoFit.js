@@ -120,13 +120,13 @@ const FondoFit = () => {
 
 			<div id="fondo-fit-notificaciones">
 				<div className="container">
-					<h3 className="text-light text-center-align row">Notificaciones</h3>
-					<p className="second text-light text-center-align row ">Puede realizar sus notificaciones de
+					<h3 className="text-dark text-center-align row">Notificaciones</h3>
+					<p className="second text-dark text-center-align row ">Puede realizar sus notificaciones de
 					 aportes a través de los siguientes enlaces:</p>
 				 	<div className="row">
-					<div className="col s10 offset-s1 l4 offset-l4">
-						<a href="https://goo.gl/forms/3hTyNTK8GLDbtlTO2" target="_blank" className="button-light block-display">Notificar aporte via web</a>
-						<a href="https://goo.gl/forms/HEYenksPqoybwE8A2" target="_blank" className="button-light block-display">Solicitar rescate</a>
+					<div className="col s10 offset-s1 m4 offset-m4 l4 offset-l4">
+						<a href="https://goo.gl/forms/3hTyNTK8GLDbtlTO2" target="_blank" className="second-link block-display">Notificar aporte via web</a>
+						<a href="https://goo.gl/forms/HEYenksPqoybwE8A2" target="_blank" className="second-link block-display">Solicitar rescate</a>
 					</div>
 					</div>
 				</div>

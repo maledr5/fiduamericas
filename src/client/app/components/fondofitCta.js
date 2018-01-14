@@ -16,7 +16,7 @@ class FondofitCta extends React.Component {
 					</div>
 					<div>
 						<span className="border-box box-dark">
-							<Link to="/faq/como_puedo_invertir" className="main-link">¿Cómo puedo invertir?</Link>
+							<Link to="/faq#como_puedo_invertir" className="main-link">¿Cómo puedo invertir?</Link>
 						</span>
 					</div>
 					<div className="">

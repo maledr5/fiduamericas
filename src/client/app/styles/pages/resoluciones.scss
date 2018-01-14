@@ -14,25 +14,3 @@
 a.pdf-link:hover {
 	color: $sec-color;
 }
-
-#fondo-fit-descargas,
-#fondo-fit-apertura-cuenta,
-#fondo-fit-notificaciones {
-	padding:20px;
-}
-
-#fondo-fit-descargas {
-	@media #{$medium-and-down} {
-		padding: 20px;
-		div.link-row:first-child { margin-bottom: 10px; }
-	}
-}
-#fondo-fit-apertura-cuenta {
-	@media #{$medium-and-down} {
-		padding: 20px;
-	}
-}
-#fondo-fit-notificaciones {
-	background-color: $main-color;
-	a.button-light { margin-right: 20px; }
-}
