@@ -15,7 +15,7 @@ class ContactoCta extends React.Component {
 		let linkTo = "/" + productCta;
 		return (
 			<div id="contacto-cta">
-				<h5 className="center-text">¿NECESITAS MÁS INFORMACIÓN?</h5>
+				<h5 className="center-text">¿NECESITA MÁS INFORMACIÓN?</h5>
 				<div className="actions">
 					<div>
 						<span className="border-box box-dark">

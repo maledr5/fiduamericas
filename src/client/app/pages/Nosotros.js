@@ -67,7 +67,7 @@ const Nosotros = () => {
 			</div>
 			<div id="opciones-cta" className="container center-text">
 				<div className="row">
-					<h5 className="col s12">DESCUBRE NUESTROS PRODUCTOS Y SERVICIOS</h5>
+					<h5 className="col s12">DESCUBRA NUESTROS PRODUCTOS Y SERVICIOS</h5>
 				</div>
 				<div className="row">
 					<span className="col l3 m4 s8 offset-l2 offset-m1 offset-s2 border-box box-dark">
