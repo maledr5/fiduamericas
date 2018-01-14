@@ -14,6 +14,7 @@ const faqQuestion =
 <FaqQuestion
 	question={ question }
 	answer={ answer }
+	id="que_significa_fideicomiso"
 />;
 
 export default faqQuestion;

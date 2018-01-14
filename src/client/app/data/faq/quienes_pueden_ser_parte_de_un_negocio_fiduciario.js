@@ -15,6 +15,7 @@ const faqQuestion =
 <FaqQuestion
 	question={ question }
 	answer={ answer }
+	id="quienes_pueden_ser_parte_de_un_negocio_fiduciario"
 />;
 
 export default faqQuestion;

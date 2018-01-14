@@ -28,6 +28,7 @@ const faqQuestion =
 <FaqQuestion
 	question={ question }
 	answer={ answer }
+	id="cuales_son_los_beneficios_de_constituir_un_fideicomiso"
 />;
 
 export default faqQuestion;

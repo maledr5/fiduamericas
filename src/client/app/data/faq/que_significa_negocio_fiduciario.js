@@ -15,6 +15,7 @@ const faqQuestion =
 <FaqQuestion
 	question={ question }
 	answer={ answer }
+	id="que_significa_negocio_fiduciario"
 />;
 
 export default faqQuestion;

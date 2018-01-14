@@ -15,6 +15,7 @@ const faqQuestion =
 <FaqQuestion
 	question={ question }
 	answer={ answer }
+	id="cuales_son_inversiones_comparables"
 />;
 
 export default faqQuestion;

@@ -20,6 +20,18 @@ const FaqQuestion = React.createClass({
         this.setState({ showAnswer: !currentState });
     },
 
+    componentDidMount() {
+    	if(window.location.hash && !!this.props.id) {
+			var locationId = window.location.hash.replace("#","" );
+			if (this.props.id == locationId) {
+				this.toggleState();
+				setTimeout(function(){
+					document.getElementById(locationId).scrollIntoView();
+				}, 300);
+			}
+		}
+  	},
+
 	render() {
 		return (
 			<div className="faq-question">

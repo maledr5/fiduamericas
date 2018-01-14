@@ -22,6 +22,7 @@ const faqQuestion =
 <FaqQuestion
 	question={ question }
 	answer={ answer }
+	id="cuales_son_las_funciones_de_fiduamericas"
 />;
 
 export default faqQuestion;

@@ -41,6 +41,7 @@ const faqQuestion =
 <FaqQuestion
 	question={ question }
 	answer={ answer }
+	id="como_puedo_invertir"
 />;
 
 export default faqQuestion;

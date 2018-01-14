@@ -11,17 +11,17 @@ class FondofitCta extends React.Component {
 				<div className="actions">
 					<div>
 						<span className="border-box box-dark">
-							<Link to="/faq" className="main-link">Beneficios</Link>
+							<Link to="/faq#cuales_son_los_beneficios_de_invertir_en_un_fondo_de_inversion" className="main-link">Beneficios</Link>
 						</span>
 					</div>
 					<div>
 						<span className="border-box box-dark">
-							<Link to="/faq" className="main-link">¿Cómo puedo invertir?</Link>
+							<Link to="/faq/como_puedo_invertir" className="main-link">¿Cómo puedo invertir?</Link>
 						</span>
 					</div>
 					<div className="">
 						<span className="border-box box-dark">
-							<Link to="/faq" className="main-link">¿Cómo funciona?</Link>
+							<Link to="/fondos" className="main-link">¿Cómo funciona?</Link>
 						</span>
 					</div>
 				</div>

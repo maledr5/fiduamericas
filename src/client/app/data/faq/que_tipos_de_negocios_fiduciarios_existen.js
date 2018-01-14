@@ -32,6 +32,7 @@ const faqQuestion =
 <FaqQuestion
 	question={ question }
 	answer={ answer }
+	id="que_tipos_de_negocios_fiduciarios_existen"
 />;
 
 export default faqQuestion;

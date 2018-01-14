@@ -56,6 +56,7 @@ const faqQuestion =
 <FaqQuestion
 	question={ question }
 	answer={ answer }
+	id="cuales_son_los_beneficios_de_invertir_en_un_fondo_de_inversion"
 />;
 
 export default faqQuestion;

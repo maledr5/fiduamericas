@@ -14,6 +14,7 @@ const faqQuestion =
 <FaqQuestion
 	question={ question }
 	answer={ answer }
+	id="que_es_un_fondo_de_inversion"
 />;
 
 export default faqQuestion;
