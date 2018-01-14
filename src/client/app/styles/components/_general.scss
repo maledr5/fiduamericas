@@ -114,6 +114,11 @@ p.normal {
 	font-size: 1em;
 }
 
+.hightlight {
+	font-family: $font-second;
+	font-size: 2.5em;
+}
+
 @media #{$small-and-down} {
 	p.main {font-size: 1.3em; line-height: 1.8em;}
 	p.second {font-size: 1.1em; line-height: 1.5em;}
@@ -192,6 +197,30 @@ p.normal {
 .flex-center {
 	@extend %flexbox;
 	@include justify-content(space-around);
+}
+
+.pdf-icon {
+	background-image: url("../images/icon_pdf.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.xls-icon {
+	background-image: url("../images/icon_xls.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.online-icon {
+	background-image: url("../images/icon_online.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
 }
 // x. Carousel banner dots
 // ==========================================================================
@@ -376,6 +405,11 @@ input[type=submit] {
 a:focus {
 	outline: none;
 }
+
+a.inline-link {
+	color: $main-color;
+}
+a.inline-link:hover { text-decoration: underline; }
 
 .active {
 	color: $third-color!important;

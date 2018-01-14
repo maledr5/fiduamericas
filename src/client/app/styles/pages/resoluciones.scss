@@ -5,21 +5,34 @@
 
 #resoluciones,
 #marcoLegal {
-
 	margin-bottom: 50px;
+}
+.link-row {
+	@extend %flexbox;
+    @include flex-direction();
+}
+a.pdf-link:hover {
+	color: $sec-color;
+}
 
-	.row.link-row {
-		@extend %flexbox;
-	    @include flex-direction();
+#fondo-fit-descargas,
+#fondo-fit-apertura-cuenta,
+#fondo-fit-notificaciones {
+	padding:20px;
+}
+
+#fondo-fit-descargas {
+	@media #{$medium-and-down} {
+		padding: 20px;
+		div.link-row:first-child { margin-bottom: 10px; }
 	}
-	.pdf-icon {
-		background-image: url("../images/icon_pdf.svg");
-	    background-size: contain;
-	    background-repeat: no-repeat;
-	    width: 50px;
-	    height: 50px;
+}
+#fondo-fit-apertura-cuenta {
+	@media #{$medium-and-down} {
+		padding: 20px;
 	}
-	a.pdf-link:hover {
-		color: $sec-color;
-	}
+}
+#fondo-fit-notificaciones {
+	background-color: $main-color;
+	a.button-light { margin-right: 20px; }
 }

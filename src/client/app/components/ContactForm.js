@@ -61,14 +61,19 @@ class ContactoForm extends React.Component {
 	setDefaults() {
 		var defaultType = this.props.defaultType;
 		if (!!defaultType){
-			var defaultFondosMessage = "Quisiera más información a cerca de ";
+			var message = {
+				"fideicomisos": "Quisiera más información a cerca de ",
+				"fondos": "Quisiera más información a cerca de ",
+				"fondofit": "Me gustaría invertir en el "
+			};
 			var productTypes = {
 				"fideicomisos": "Negocios Fiduciarios",
-				"fondos": "Fondos de Inversión"
+				"fondos": "Fondos de Inversión",
+				"fondofit": "Fondo Fit"
 			};
 
 			var currentProduct = productTypes[defaultType];
-			var messageForProduct = defaultFondosMessage + currentProduct + ".";
+			var messageForProduct = message[defaultType] + currentProduct + ".";
 
 			this.setState({"typeValue": currentProduct});
 			this.setState({"messageValue": messageForProduct});
@@ -141,6 +146,7 @@ class ContactoForm extends React.Component {
 										<option value="" disabled >Escoge un tipo de consulta</option>
 										<option value="Negocios Fiduciarios">Negocios Fiduciarios</option>
 										<option value="Fondos de Inversión">Fondos de Inversión</option>
+										<option value="Fondo Fit">Fondo Fit</option>
 										<option value="Otro tipo de consulta">Otro tipo de consulta</option>
 									</select>
 									<span className="caret caret-down"></span>

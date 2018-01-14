@@ -12,6 +12,7 @@ import Nosotros from './pages/Nosotros';
 import Fideicomisos from './pages/Fideicomisos';
 import ProductCard from './components/ProductCard';
 import Fondos from './pages/Fondos';
+import FondoFit from './pages/FondoFit';
 import Faq from './pages/Faq';
 import Contacto from './pages/Contacto';
 import Resoluciones from './pages/Resoluciones';
@@ -32,6 +33,7 @@ const App = () =>
             <Route exact path="/nosotros" component={Nosotros} />
             <Route exact path="/fideicomisos" component={Fideicomisos} />
             <Route exact path="/fondos" component={Fondos} />
+            <Route exact path="/fondofit" component={FondoFit} />
             <Route exact path="/faq" component={Faq} />
             <Route exact path="/contacto" component={Contacto} />
             <Route exact path="/resoluciones" component={Resoluciones} />
