@@ -32,7 +32,7 @@ const App = () =>
             <Route exact path="/home" component={Home} />
             <Route exact path="/nosotros" component={Nosotros} />
             <Route exact path="/fideicomisos" component={Fideicomisos} />
-            <Route exact path="/fondos" component={Fondos} />
+            <Route exact path="/fondos-de-inversion" component={Fondos} />
             <Route exact path="/fondofit" component={FondoFit} />
             <Route exact path="/faq" component={Faq} />
             <Route exact path="/contacto" component={Contacto} />

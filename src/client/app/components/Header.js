@@ -38,7 +38,7 @@ class Header extends React.Component {
                     Negocios Fiduciarios</Link>
                   </li>
                   <li>
-                    <Link className="navbar-link" to="/fondos" activeClassName="active" onClick={ this.unCheck } >
+                    <Link className="navbar-link" to="/fondos-de-inversion" activeClassName="active" onClick={ this.unCheck } >
                     Fondos</Link>
                   </li>
                   <li>

@@ -33,7 +33,7 @@ const Footer = () => {
 		<div className="footer-navbar">
 			<Link to="/nosotros" className="navbar-link" activeClassName="active" >Quiénes somos</Link>
 			<Link to="/fideicomisos" className="navbar-link" activeClassName="active" >Negocios Fiduciarios</Link>
-			<Link to="/fondos" className="navbar-link" activeClassName="active" >Fondos</Link>
+			<Link to="/fondos-de-inversion" className="navbar-link" activeClassName="active" >Fondos</Link>
 			<Link to="/faq" className="navbar-link" activeClassName="active" >FAQ</Link>
 			<Link to="/contacto" className="navbar-link" activeClassName="active" >Contacto</Link>
 		</div>
@@ -42,9 +42,16 @@ const Footer = () => {
 			&nbsp;Fiduamericas 2017.
 		</div>
 		<div className="footer-copy">
+			<p>
+				Fiduciaria de las Américas es una administradora de
+				<Link to="/fondos-de-inversion"> fondos de inversión</Link>
+				&nbsp;y <Link to="/">fideicomiso Ecuador</Link>,
+				<br/>conformada por un grupo de profesionales multidisciplinarios con amplia experiencia en materia fiduciaria,
+				financiera y legal.
+			</p>
 			<p>Some icons and images were taken but modified from
-				&nbsp;<a href="www.freepick.com">Freepik</a> and
-				&nbsp;<a href="www.flaticon.com">Flaticon</a>
+				&nbsp;<a href="https://www.freepick.com" target="_blank">Freepik</a> and
+				&nbsp;<a href="https://www.flaticon.com" target="_blank">Flaticon</a>
 			</p>
 		</div>
     </footer>

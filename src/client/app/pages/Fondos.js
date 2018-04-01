@@ -42,9 +42,37 @@ const Fondos = () => {
 					<h3>¿Cómo funciona un fondo de inversión?</h3>
 					<p className="normal text-dark">El fondo de inversión es un patrimonio común que es invertido por un comité especializado, en diversos títulos valor con el fin de generar rendimiento, liquidez y seguridad para nuestros inversionistas.</p>
 				</div>
-				<img src={fondos_como} />
+				<img src={fondos_como} alt="fondos de inversion" name="fondos de inversion"/>
 
 				<div className="fondos-como-img"></div>
+			</div>
+
+			<div id="fondos-contenido" className="container">
+				<br/><br/>
+				<div className="row">
+					<p className="col offset-l3 l6">
+						El <HashLink to="/fondo-de-inversion">Fondo de Inversión</HashLink> es una excelente alternativa de ahorro porque ofrece más
+						 rentabilidad que otras opciones de inversión y mayor disponibilidad de sus ahorros por su política de retiros. Su portafolio de inversión
+						 está en instrumentos con calificación de Riesgo A- o superior, de renta fija y variable. El objetivo del fondo de inversión es
+						 obtener rendimientos a través de inversiones seguras y liquidas.
+				 	</p>
+			 	</div>
+			 	<div className="row">
+					<p className="col offset-l3 l6">
+						A través del <HashLink to="/fondo-de-inversion">Fondo de Inversión</HashLink>, se puede acumular los rendimientos
+						 mensuales e invertirlos automáticamente junto al capital,
+						 para mejorar el rendimiento y así obtener un mayor retorno para la inversión realizada. También, se puede realizar un <strong>ahorro</strong>
+						 &nbsp; programado es decir se autoriza el débito automático de una cuenta bancaria.
+					</p>
+				</div>
+				<div className="row">
+					<p className="col offset-l3 l6">
+						El <strong>Fondo de Inversión</strong> invierte en títulos valores aprobados por la Superintendencia de Compañías, Valores y Seguros.
+						 Por ejemplo, invierte en certificados de depósito a plazo, pólizas de acumulación, entre otros, emitidos por instituciones
+						 financieras del Ecuador. También invierte en títulos emitidos a través del Mercado de Valores como papel comercial, facturas
+						 comerciales negociables, obligaciones, entre otros.
+					</p>
+				</div>
 			</div>
 
 			<div id="fondos-lista" className="container">

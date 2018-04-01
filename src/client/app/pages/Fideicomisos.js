@@ -97,7 +97,7 @@ const Fideicomisos = () => {
 				<ProductsCards products={fideicomisosData()} type="fideicomisos" />
 			</div>
 
-			<ContactoCta productCta="fondos" CurrentProduct="fideicomisos"/>
+			<ContactoCta productCta="fondos-de-inversion" CurrentProduct="fideicomisos"/>
 
 		</div>
 	)
