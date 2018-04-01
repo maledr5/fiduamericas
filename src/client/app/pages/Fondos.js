@@ -25,11 +25,11 @@ const Fondos = () => {
 
 			<div id="fondos-cta" className="container">
 				<div className="row">
-					<span className="col l4 m6 s10 offset-s2 offset-l7 border-box box-main hidden">
-                		<HashLink to="/fondofit" className="main-link">Quiero Invertir en el Fondo Fit</HashLink>
-					</span>
 					<span className="col l4 m6 s10 offset-s2 offset-l7 border-box box-main">
-                		<HashLink to="#fondos-como" className="main-link">¿Cómo funciona un fondo?</HashLink>
+						<HashLink to="/fondofit" className="main-link">Quiero Invertir en el Fondo Fit</HashLink>
+					</span>
+					<span className="col l4 m6 s10 offset-s2 offset-l7 border-box box-main hidden">
+						<HashLink to="#fondos-como" className="main-link">¿Cómo funciona un fondo?</HashLink>
 					</span>
 					<span className="col l4 m6 s10 offset-s1 offset-l1 border-box box-main">
 						<HashLink to="#fondos-lista" className="main-link">Conoce nuestros fondos de inversión</HashLink>

@@ -23,7 +23,7 @@ const FondoFit = () => {
 							<p className="second text-dark">Plazo mínimo <br/> en días
 							<span className="hightlight text-main">90</span></p>
 							<hr/>
-							<p className="second text-dark">Retiros desde<br/> el dia
+							<p className="second text-dark">Retiros desde<br/> el día
 							<span className="hightlight text-main">15</span></p>
 							<hr/>
 							<p className="second text-dark">Monto de <br/> apertura desde
@@ -51,7 +51,7 @@ const FondoFit = () => {
 				</div>
 				<div className="row fondo-fit-cta">
 					<span className="col l4 m6 s10 offset-s2 offset-m4 offset-l4 border-box box-main">
-	            		<Link to={"/contacto?product=fondofit"} className="main-link">Quiro Invertir</Link>
+						<Link to={"/contacto?product=fondofit"} className="main-link">Quiero Invertir</Link>
 					</span>
 				</div>
 
@@ -123,7 +123,7 @@ const FondoFit = () => {
 					<h3 className="text-dark text-center-align row">Notificaciones</h3>
 					<p className="second text-dark text-center-align row ">Puede realizar sus notificaciones de
 					 aportes a través de los siguientes enlaces:</p>
-				 	<div className="row">
+					<div className="row">
 					<div className="col s10 offset-s1 m4 offset-m4 l4 offset-l4">
 						<a href="https://goo.gl/forms/3hTyNTK8GLDbtlTO2" target="_blank" className="second-link block-display">Notificar aporte via web</a>
 						<a href="https://goo.gl/forms/HEYenksPqoybwE8A2" target="_blank" className="second-link block-display">Solicitar rescate</a>
