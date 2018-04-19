@@ -19,7 +19,7 @@ const Home = () => {
 						<Link to="/fideicomisos" className="main-link">Negocios Fiduciarios</Link>
 					</span>
 					<span className="col s8 m4 offset-s2 offset-l1 offset-m1 border-box box-main">
-						<Link to="/fondos" className="main-link">Fondos de Inversión</Link>
+						<Link to="/fondos-de-inversion" className="main-link">Fondos de Inversión</Link>
 					</span>
 				</div>
 			</div>
@@ -28,7 +28,7 @@ const Home = () => {
 				<div className="l5 text-main right">
 					<h2>Pequeños ahorros hacia grandes sueños.</h2>
 					<p className="normal text-dark">El <strong>fondo de inversión</strong> es un patrimonio común <br/> cuyo objetivo es generar rendimientos.</p>
-                	<Link to="/fondos" className="second-link">¿Cómo funciona un fondo de inversión?</Link>
+                	<Link to="/fondos-de-inversion" className="second-link">¿Cómo funciona un fondo de inversión?</Link>
 				</div>
 				<img src={fondos} />
 			</div>
