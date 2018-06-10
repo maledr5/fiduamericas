@@ -4,8 +4,13 @@ import { NavLink as Link } from 'react-router-dom';
 
 import FondofitCta from '../components/FondofitCta.js'
 
-import aprobacion from '../data/downloads/resoluciones_04.pdf'
-import resoluciones_01 from '../data/downloads/resoluciones_01.pdf'
+import presentacion from '../data/downloads/fondofit_presentacion.pdf'
+import reglamento from '../data/downloads/fondofit_reglamento.pdf'
+import contratoIncorporacion from '../data/downloads/fondofit_contrato.pdf'
+import portafolio from '../data/downloads/fondofit_presentacion.pdf'
+import formularioNatural from '../data/downloads/fondofit_formulario_pn.pdf'
+import formularioJuridica from '../data/downloads/fondofit_formulario_pj.pdf'
+
 
 const FondoFit = () => {
 	return (
@@ -62,21 +67,21 @@ const FondoFit = () => {
 					<div className="row ">
 						<div className="col s10 m4 l4 link-row">
 							<span className="pdf-icon"></span>
-							<a href={resoluciones_01} className="pdf-link" target="_blank">Presentación</a>
+							<a href={presentacion} className="pdf-link" target="_blank">Presentación</a>
 						</div>
 						<div className="col s10 m4 l4 link-row">
 							<span className="pdf-icon"></span>
-							<a href={resoluciones_01} className="pdf-link" target="_blank">Contrato de Incorporación</a>
+							<a href={contratoIncorporacion} className="pdf-link" target="_blank">Contrato de Incorporación</a>
 						</div>
 					</div>
 					<div className="row ">
 						<div className="col s10 m4 l4 link-row">
 							<span className="pdf-icon"></span>
-							<a href={resoluciones_01} className="pdf-link" target="_blank">Reglamento</a>
+							<a href={reglamento} className="pdf-link" target="_blank">Reglamento</a>
 						</div>
 						<div className="col s10 m4 l4 link-row">
 							<span className="pdf-icon"></span>
-							<a href={resoluciones_01} className="pdf-link" target="_blank">Portafolio</a>
+							<a href={portafolio} className="pdf-link" target="_blank">Portafolio</a>
 						</div>
 					</div>
 				</div>
@@ -98,7 +103,7 @@ const FondoFit = () => {
 							</div>
 							<div className="row link-row">
 								<span className="xls-icon"></span>
-								<a href={resoluciones_01} className="pdf-link" target="_blank">Descargar formulario para imprimir</a>
+								<a href={formularioNatural} className="pdf-link" target="_blank">Descargar formulario para imprimir</a>
 							</div>
 						</div>
 						<div id="persona-juridica" className="col s11 m6 l5">
@@ -109,7 +114,7 @@ const FondoFit = () => {
 							</div>
 							<div className="row link-row">
 								<span className="xls-icon"></span>
-								<a href={resoluciones_01} className="pdf-link" target="_blank">Descargar formulario para imprimir</a>
+								<a href={formularioJuridica} className="pdf-link" target="_blank">Descargar formulario para imprimir</a>
 							</div>
 						</div>
 					</div>
