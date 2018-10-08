@@ -4,6 +4,8 @@ import { Router, Route } from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 import ScrollToTop from './ScrollToTop';
 
+import GoogleApiService from './services/GoogleAPI.js'
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -40,6 +42,8 @@ const App = () =>
             <Route exact path="/marcolegal" component={MarcoLegal} />
 
             <Route exact path="/fideicomisos/:name" component={ProductCard}/>
+
+            <Route exact path="/googleapi" component={GoogleApiService} />
 
             <Footer />
         </div>

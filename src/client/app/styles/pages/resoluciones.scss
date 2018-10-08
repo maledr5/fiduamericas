@@ -14,3 +14,12 @@
 a.pdf-link:hover {
 	color: $sec-color;
 }
+
+.google-api {
+	margin-bottom: 40px;
+
+	a {
+		display: block;
+	    max-width: 200px;
+	}
+}
