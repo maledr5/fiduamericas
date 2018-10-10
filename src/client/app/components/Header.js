@@ -23,6 +23,9 @@ class Header extends React.Component {
       return (
         <header id="header">
           <nav className="container">
+            <div className="row">
+              <a href="http://fiduamericas.com/documentos" className="col l12 offset-l10 top-header-link" target="_blank">Documentos en Línea</a>
+            </div>
             <div className="main-header row">
               <Link className="col l3 brand" to="/home" activeClassName=""></Link>
               <nav className="col l8 offset-l2">

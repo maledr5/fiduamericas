@@ -3,10 +3,23 @@
 // Nav Bar
 // ==========================================================================
 
+
+a.top-header-link {
+    padding: 20px!important;
+    background-color: $main-color;
+    color: #fff;
+    max-width: 200px;
+    text-align: center;
+}
+
+a.top-header-link:hover {
+	background-color: $sec-color;
+}
+
 nav {
 	.main-header {
 		@extend %flexbox;
-		padding: 40px 0;
+		padding: 0px 0 40px 0;
 	}
 
 	.main-header .brand {
