@@ -4,8 +4,6 @@ import { Router, Route } from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 import ScrollToTop from './ScrollToTop';
 
-import GoogleApiService from './services/GoogleAPI.js'
-
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -19,7 +17,7 @@ import Faq from './pages/Faq';
 import Contacto from './pages/Contacto';
 import Resoluciones from './pages/Resoluciones';
 import MarcoLegal from './pages/MarcoLegal';
-
+import ResolucionesGoogleApi from './pages/ResolucionesGoogleApi.js';
 
 const customHistory = createBrowserHistory()
 
@@ -43,7 +41,7 @@ const App = () =>
 
             <Route exact path="/fideicomisos/:name" component={ProductCard}/>
 
-            <Route exact path="/googleapi" component={GoogleApiService} />
+            <Route exact path="/nuevasResoluciones" component={ResolucionesGoogleApi} />
 
             <Footer />
         </div>

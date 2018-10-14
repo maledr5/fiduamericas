@@ -12,3 +12,5 @@ src/client/app/styles/index.css
 src/client/app/styles/index.css.map
 
 src/server/vendor
+src/server/credentials.json
+src/server/token.json
