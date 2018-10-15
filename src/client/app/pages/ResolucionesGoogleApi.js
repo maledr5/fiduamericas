@@ -17,7 +17,7 @@ class ResolucionesGoogleApi extends React.Component {
 	}
 
 	getResolucionesFromServer() {
-		let server = "http://fiduamericas/Services.php";
+		let server = "http://fiduamericas.com/Services.php";
 		// let server = "http://localhost:8888/src/server/Services.php";
 		axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 		axios.post(server, {
