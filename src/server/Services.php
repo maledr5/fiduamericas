@@ -46,3 +46,7 @@ function setHeaders($statusCode){
 	header('Content-Type: application/json; charset=utf-8');
 	header("HTTP/1.1 ". $statusCode ." ". $httpStatus[$statusCode]);
 }
+
+function debug($stringToPrint) {
+	file_put_contents('custom_error.log', "*************" . $stringToPrint);
+}
