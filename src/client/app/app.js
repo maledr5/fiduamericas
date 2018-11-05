@@ -36,12 +36,10 @@ const App = () =>
             <Route exact path="/fondofit" component={FondoFit} />
             <Route exact path="/faq" component={Faq} />
             <Route exact path="/contacto" component={Contacto} />
-            <Route exact path="/resoluciones" component={Resoluciones} />
+            <Route exact path="/resoluciones" component={ResolucionesGoogleApi} />
             <Route exact path="/marcolegal" component={MarcoLegal} />
 
             <Route exact path="/fideicomisos/:name" component={ProductCard}/>
-
-            <Route exact path="/nuevasResoluciones" component={ResolucionesGoogleApi} />
 
             <Footer />
         </div>
