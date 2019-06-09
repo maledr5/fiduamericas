@@ -11,11 +11,14 @@ const answer =
 	<img src={ faqImage } />
 </div>;
 
-const faqQuestion =
-<FaqQuestion
-	question={ question }
-	answer={ answer }
-	id="cuales_son_inversiones_comparables"
-/>;
+const FaqQuestionWithData = () => {
+	return (
+		<FaqQuestion
+			question={ question }
+			answer={ answer }
+			id="cuales_son_inversiones_comparables"
+		/>
+	)
+}	
 
-export default faqQuestion;
+export default FaqQuestionWithData;

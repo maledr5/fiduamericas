@@ -28,11 +28,14 @@ const answer =
 	<HashLink className="second-link" to="fideicomisos#fid-negocios">Ver más Negocios Fiduciarios</HashLink>
 </div>;
 
-const faqQuestion =
-<FaqQuestion
-	question={ question }
-	answer={ answer }
-	id="que_tipos_de_negocios_fiduciarios_existen"
-/>;
+const FaqQuestionWithData = () => {
+	return (
+		<FaqQuestion
+			question={ question }
+			answer={ answer }
+			id="que_tipos_de_negocios_fiduciarios_existen"
+		/>
+	)
+}
 
-export default faqQuestion;
+export default FaqQuestionWithData;

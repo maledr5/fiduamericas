@@ -24,13 +24,17 @@ const answer =
 	</ul>
 </div>;
 
-const faqQuestion =
-<FaqQuestion
-	question={ question }
-	answer={ answer }
-	id="cuales_son_los_beneficios_de_constituir_un_fideicomiso"
-/>;
+const FaqQuestionWithData = () => {
+	return (
+		<FaqQuestion
+			question={ question }
+			answer={ answer }
+			id="cuales_son_los_beneficios_de_constituir_un_fideicomiso"
+		/>
+	)
+}
 
-export default faqQuestion;
+export default FaqQuestionWithData;
+
 
 

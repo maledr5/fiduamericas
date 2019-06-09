@@ -11,11 +11,14 @@ const answer =
 Los beneficiarios pueden ser personas naturales o jurídicas, nacionales o extranjeras que existen o que se espera que existan al momento de la constitución o de la extinción del fideicomiso. (Los Constituyentes pueden ser Beneficiarios). </p>
 </div>;
 
-const faqQuestion =
-<FaqQuestion
-	question={ question }
-	answer={ answer }
-	id="quienes_pueden_ser_parte_de_un_negocio_fiduciario"
-/>;
+const FaqQuestionWithData = () => {
+	return (
+		<FaqQuestion
+			question={ question }
+			answer={ answer }
+			id="quienes_pueden_ser_parte_de_un_negocio_fiduciario"
+		/>
+	)
+}
 
-export default faqQuestion;
+export default FaqQuestionWithData;

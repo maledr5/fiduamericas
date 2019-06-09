@@ -10,11 +10,14 @@ const answer =
 	<p>Un fondo de inversión es el patrimonio común, integrado por aportes de varios inversionistas, personas naturales y jurídicas legalmente reconocidas, para su inversión en los valores, bienes y demás activos que la Ley de Mercado de Valores permite.</p>
 </div>;
 
-const faqQuestion =
-<FaqQuestion
-	question={ question }
-	answer={ answer }
-	id="que_es_un_fondo_de_inversion"
-/>;
+const FaqQuestionWithData = () => {
+	return (
+		<FaqQuestion
+			question={ question }
+			answer={ answer }
+			id="que_es_un_fondo_de_inversion"
+		/>
+	)
+}
 
-export default faqQuestion;
+export default FaqQuestionWithData;

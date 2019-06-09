@@ -14,11 +14,14 @@ const answer =
 	<img src={ faqImage } />
 </div>;
 
-const faqQuestion =
-<FaqQuestion
-	question={ question }
-	answer={ answer }
-	id="quien_interviene_en_un_negocio_fiduciario"
-/>;
+const FaqQuestionWithData = () => {
+	return (
+		<FaqQuestion
+			question={ question }
+			answer={ answer }
+			id="quien_interviene_en_un_negocio_fiduciario"
+		/>
+	)
+}
 
-export default faqQuestion;
+export default FaqQuestionWithData;

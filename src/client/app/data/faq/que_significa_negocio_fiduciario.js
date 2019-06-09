@@ -11,11 +11,14 @@ const answer =
 Constituyentes: (i) transfieren de manera temporal e irrevocable, la propiedad de bienes a un patrimonio autónomo dotado de personalidad jurídica para que la Fiduciaria cumpla con las finalidades específicas señaladas en un contrato constitutivo, en favor del Beneficiario; o (ii) instruyen irrevocablemente a una Fiduciaria para que cumpla con las finalidades específicas señaladas en un contrato constitutivo, en favor del Beneficiario. </p>
 </div>;
 
-const faqQuestion =
-<FaqQuestion
-	question={ question }
-	answer={ answer }
-	id="que_significa_negocio_fiduciario"
-/>;
+const FaqQuestionWithData = () => {
+	return (
+		<FaqQuestion
+			question={ question }
+			answer={ answer }
+			id="que_significa_negocio_fiduciario"
+		/>
+	)
+}
 
-export default faqQuestion;
+export default FaqQuestionWithData;
