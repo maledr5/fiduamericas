@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const FaqQuestion = React.createClass({
+const FaqQuestion = React.Component({
 
 	getInitialState() {
 		return { showAnswer: false };

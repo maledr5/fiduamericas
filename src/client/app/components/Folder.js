@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Folder = React.createClass({
+const Folder = React.Component({
 
 	getInitialState() {
 		return { showAnswer: false };
