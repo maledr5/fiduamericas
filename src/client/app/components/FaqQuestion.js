@@ -1,24 +1,26 @@
 import React from 'react';
 
+class FaqQuestion extends React.Component {
 
-const FaqQuestion = React.Component({
-
-	getInitialState() {
-		return { showAnswer: false };
-	},
+	constructor(props) {
+		super(props);
+		this.state = {
+            showAnswer: false
+		};
+    }
 
 	show() {
 		this.setState({ showAnswer: false });
-	},
+	}
 
 	hide() {
 		this.setState({ showAnswer: true });
-	},
+	}
 
 	toggleState() {
         const currentState = this.state.showAnswer;
         this.setState({ showAnswer: !currentState });
-    },
+    }
 
     componentDidMount() {
     	if(window.location.hash && !!this.props.id) {
@@ -30,7 +32,7 @@ const FaqQuestion = React.Component({
 				}, 300);
 			}
 		}
-  	},
+  	}
 
 	render() {
 		return (
@@ -48,6 +50,6 @@ const FaqQuestion = React.Component({
 			</div>
 		)
 	}
-});
+}
 
 export default FaqQuestion
