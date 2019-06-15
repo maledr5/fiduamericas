@@ -37,14 +37,11 @@ const answer =
 	</ul>
 </div>;
 
-const FaqQuestionWithData = () => {
-	return (
-		<FaqQuestion
-			question={ question }
-			answer={ answer }
-			id="como_puedo_invertir"
-		/>
-	)
-}
+const faqQuestion =
+<FaqQuestion
+	question={ question }
+	answer={ answer }
+	id="como_puedo_invertir"
+/>;
 
-export default FaqQuestionWithData;
+export default faqQuestion;

@@ -52,14 +52,11 @@ const answer =
 	</ul>
 </div>;
 
-const FaqQuestionWithData = () => {
-	return (
-		<FaqQuestion
-			question={ question }
-			answer={ answer }
-			id="cuales_son_los_beneficios_de_invertir_en_un_fondo_de_inversion"
-		/>
-	)
-}
+const faqQuestion =
+<FaqQuestion
+	question={ question }
+	answer={ answer }
+	id="cuales_son_los_beneficios_de_invertir_en_un_fondo_de_inversion"
+/>;
 
-export default FaqQuestionWithData;
+export default faqQuestion;
