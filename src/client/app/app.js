@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Route } from 'react-router-dom'
-import createBrowserHistory from 'history/createBrowserHistory'
+import { createBrowserHistory } from 'history';
 import ScrollToTop from './ScrollToTop';
 
 import Header from './components/Header';
