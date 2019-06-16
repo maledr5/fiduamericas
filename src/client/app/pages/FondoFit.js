@@ -90,7 +90,7 @@ const FondoFit = () => {
 
 				<div id="fondo-fit-apertura-cuenta">
 					<h3 className="text-main row ">Apertura de Cuenta</h3>
-					<p className="second text-dark row ">Para la apertura de du cuenta, necesita llenar los siguientes formularios.
+					<p className="second text-dark row ">Para la apertura de su cuenta, necesita llenar los siguientes formularios.
 					 Puede hacerlo en línea, o imprimiendo el formulario y llevándolo a nuestras oficinas.
 						  Si tiene alguna duda, puede contactarse con nosotros llenando el
 							<Link to={"/contacto?product=fondofit"} className="inline-link"> formulario de contacto.</Link></p>
