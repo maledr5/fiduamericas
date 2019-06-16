@@ -49,6 +49,13 @@ textarea {
 // 2. General styles
 // ==========================================================================
 
+.flex-display {
+	@extend %flexbox;
+}
+
+.flex-align-end {
+	@include align-items(flex-end);
+}
 
 .block-display {
 	display: block;
@@ -117,6 +124,11 @@ p.normal {
 .hightlight {
 	font-family: $font-second;
 	font-size: 2.5em;
+}
+
+.hightlight-sec {
+	font-family: $font-second;
+	font-size: 1.5em;
 }
 
 @media #{$small-and-down} {
@@ -417,6 +429,12 @@ a.inline-link:hover { text-decoration: underline; }
     padding-bottom: 8px;
 }
 
+label {
+	font-size: 1.1em;
+	text-align: left;
+	color:$main-color;
+}
+
 .button-light,
 input[type=button].input-light,
 input[type=button].input-main,
@@ -424,8 +442,8 @@ input[type=submit].input-light,
 input[type=submit].input-main {
 	font-size: 1.1em;
 	text-align: center;
-	padding: 10px 10px;
-	margin: 15px 0;
+	padding: 8px 8px;
+	margin: 7px 0;
 	width: 100%;
 	box-sizing: border-box;
 }
@@ -646,14 +664,15 @@ textarea.input-light {
 input[type=email].input-main,
 input[type=tel].input-main,
 input[type=text].input-main,
+input[type=number].input-main,
 textarea.input-main,
 select.input-main {
-	color: $main-color;
 	border: 1px solid $main-color;
 }
 
 input[type=text].input-main,
 input[type=text].input-light,
+input[type=number].input-main,
 input[type=email].input-main,
 input[type=email].input-light,
 input[type=tel].input-main,
