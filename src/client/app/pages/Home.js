@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink as Link } from 'react-router-dom';
 
 import Carousel from '../components/HomeCarousel.js'
+import CalculadoraFondoFit from '../components/CalculadoraFondoFit'
 
 import fondos from '../images/home_fondos.jpg'
 import fideicomisos from '../images/home_fideicomisos_2.jpg'
@@ -22,6 +23,10 @@ const Home = () => {
 						<Link to="/fondos-de-inversion" className="main-link">Fondos de Inversión</Link>
 					</span>
 				</div>
+			</div>
+
+			<div id="calculadora-fondo-fit">
+				<CalculadoraFondoFit />
 			</div>
 
 			<div id="home-fondos">
