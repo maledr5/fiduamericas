@@ -238,6 +238,23 @@ p.normal {
     width: 50px;
     height: 50px;
 }
+
+// x. Notificaciones
+// ==========================================================================
+
+.error-notification {
+	background-color: $error-bg-color;
+	padding: 7px 20px;
+	margin-bottom: 10px;
+	height: auto;
+	width: 100%;
+}
+
+.error-notification:empty {
+	display: none
+}
+
+
 // x. Carousel banner dots
 // ==========================================================================
 

@@ -1,5 +1,6 @@
 
-import React from 'react';
+import React from 'react'
+import {round, areValuesInserted} from '../../utils/utils'
 
 class ContactoForm extends React.Component {
 
@@ -17,76 +18,123 @@ class ContactoForm extends React.Component {
         }
     }
 
-    INSERT_ALL_VALUES_ERROR = "Debe ingresar todos los campos antes de calcular.";
-    TASA_FONDO_FIT = 0.0535;
-    PERIOD_IN_DAYS = 30
-    YEAR_IN_DAYS = 360
+    TASA_FONDO_FIT = 0.0535
+    PERIODO_EN_DIAS = 30
+    ANIO_EN_DIAS = 360
+    MINIMO_PERMANENCIA = 90
+    MINIMO_INCREMENTO = 10
+
+    ERROR_INSERTE_VALORES = "Debe ingresar todos los campos antes de calcular"
+    ERROR_PERMANENCIA_MINIMA = `El tiempo mínimo de permanencia es de ${this.MINIMO_PERMANENCIA} dias`
+    ERROR_INCREMENTO_MINIMO = `El incremento mensual mínimo es de $${this.MINIMO_INCREMENTO}`
 
     constructor(props) {
-		super(props);
+		super(props)
 		this.state = {
             montoInicial: "",
             permanencia: 90,
             incrementoMensual: 10,
             totalRecibir: "",
             rendimientoFondo: "",
-            rendimientoBanco: ""
-		};
+            rendimientoBanco: "",
+            error: ""
+		}
     }
 
-    round(number) {
-        number = parseFloat(number)
-        return number.toFixed(2)
+    updateValueFromEvent(event) {
+        var targetName = event.target.name
+        var targetValue = event.target.value
+		this.setState({[targetName]: targetValue})
     }
 
-    updateValue(event) {
-        var targetName = event.target.name;
-        var targetValue = event.target.value;
-		this.setState({[targetName]: targetValue});
+    updateValue(key, value) {
+        this.setState({[key]: value})
     }
 
-    calcularRetornoMensual(incrementalAmount, time, foundRate) {
-        var remainingTime = time - this.PERIOD_IN_DAYS;
+    setErrorState(error) {
+        this.updateValue("error", error)
+    }
+
+    calcularRetornoMensual(incremento, permanencia, tasaFondo) {
+        var tiempoRestatne = permanencia - this.PERIODO_EN_DIAS
         var totalretornoMensual = 0
         do {
-          var retornoMensual = incrementalAmount * foundRate * remainingTime / this.YEAR_IN_DAYS
+          var retornoMensual = incremento * tasaFondo * tiempoRestatne / this.ANIO_EN_DIAS
           totalretornoMensual += retornoMensual
-          remainingTime = remainingTime - this.PERIOD_IN_DAYS
-        } while (remainingTime > 0)
+          tiempoRestatne = tiempoRestatne - this.PERIODO_EN_DIAS
+        } while (tiempoRestatne > 0)
         return totalretornoMensual
     }
 
-    showResults(montoInicial, permanencia, incrementoMensual) {
+    actualizarValoresEnPantalla(totalARecibir, retornoTotal) {
+        this.updateValue("totalRecibir", totalARecibir)
+        this.updateValue("rendimientoFondo", retornoTotal)
+        this.updateValue("rendimientoBanco", 0)
+    }
+
+    limpiarTotalesEnPantalla() {
+        this.actualizarValoresEnPantalla("", "")
+    }
+
+    mostrarResultados(montoInicial, permanencia, incrementoMensual) {
         const retornoMensual = this.calcularRetornoMensual(incrementoMensual, permanencia, this.TASA_FONDO_FIT)
-        const retornoAnualDeMontoInicial = montoInicial * this.TASA_FONDO_FIT * permanencia / this.YEAR_IN_DAYS
+        const retornoAnualDeMontoInicial = montoInicial * this.TASA_FONDO_FIT * permanencia / this.ANIO_EN_DIAS
 
-        const monthlyStay = Math.floor(permanencia / this.PERIOD_IN_DAYS)
+        const mesesDePermanencia = Math.floor(permanencia / this.PERIODO_EN_DIAS)
 
-        const totalAmount = parseFloat(montoInicial) +
-        parseFloat(incrementoMensual * monthlyStay) +
+        const totalARecibir = parseFloat(montoInicial) +
+        parseFloat(incrementoMensual * mesesDePermanencia) +
         parseFloat(retornoMensual) +
         parseFloat(retornoAnualDeMontoInicial)
 
-        const totalReturn = retornoMensual + retornoAnualDeMontoInicial
-        const banckReturn = 0
+        const retornoTotal = retornoMensual + retornoAnualDeMontoInicial
 
-        this.setState({["totalRecibir"]: this.round(totalAmount)});
-        this.setState({["rendimientoFondo"]: this.round(totalReturn)});
-        this.setState({["rendimientoBanco"]: this.round(banckReturn)});
+        this.actualizarValoresEnPantalla(round(totalARecibir), round(retornoTotal))
+    }
+
+    esTiempoPermanenciaMinimo(permanencia) {
+        return permanencia >= this.MINIMO_PERMANENCIA
+    }
+
+    esIncrementoMensualMinimo(incrementoMensual) {
+        return incrementoMensual >= this.MINIMO_INCREMENTO
+    }
+
+    esElInputValido(montoInicial, permanencia, incrementoMensual) {
+        if(!areValuesInserted([montoInicial, permanencia, incrementoMensual])) {
+            this.setErrorState(this.ERROR_INSERTE_VALORES)
+            return false
+        }
+
+        if(!this.esTiempoPermanenciaMinimo(permanencia)) {
+            this.setErrorState(this.ERROR_PERMANENCIA_MINIMA)
+            return false
+        }
+
+        if(!this.esIncrementoMensualMinimo(incrementoMensual)) {
+            this.setErrorState(this.ERROR_INCREMENTO_MINIMO)
+            return false
+        }
+
+        return true
     }
 
     calculate(event) {
         event.preventDefault()
         const {montoInicial, permanencia, incrementoMensual} = this.state
-        this.showResults(montoInicial, permanencia, incrementoMensual)
+        this.limpiarTotalesEnPantalla()
+        if(this.esElInputValido(montoInicial, permanencia, incrementoMensual)){
+            this.setErrorState("")
+            this.mostrarResultados(montoInicial, permanencia, incrementoMensual)
+        }
     }
 
     render() {
         const {montoInicial, permanencia, incrementoMensual, error, totalRecibir, rendimientoFondo, rendimeintoBanco} = this.state
         return (
                 <form>
-                    <div className="row errorNotification">
-                        {error}
+                    <div className="row">
+                        <div className="col error-notification">{error}</div>
                     </div>
                     <div className="row">
                         <div className="col s12 l6">
@@ -95,7 +143,7 @@ class ContactoForm extends React.Component {
                                 className="input-main"
                                 type="number"
                                 value={montoInicial}
-                                onChange={event => this.updateValue(event)}
+                                onChange={event => this.updateValueFromEvent(event)}
                                 name={this.CONSTANT.id.montoInicial}
                                 id={this.CONSTANT.id.montoInicial}
                                 required="required"
@@ -107,7 +155,7 @@ class ContactoForm extends React.Component {
                                 className="input-main"
                                 type="number"
                                 value={permanencia}
-                                onChange={event => this.updateValue(event)}
+                                onChange={event => this.updateValueFromEvent(event)}
                                 name={this.CONSTANT.id.permanencia}
                                 id={this.CONSTANT.id.permanencia}
                                 required="required"
@@ -121,7 +169,7 @@ class ContactoForm extends React.Component {
                                 className="input-main"
                                 type="number"
                                 value={incrementoMensual}
-                                onChange={event => this.updateValue(event)}
+                                onChange={event => this.updateValueFromEvent(event)}
                                 name={this.CONSTANT.id.incrementoMensual}
                                 id={this.CONSTANT.id.incrementoMensual}
                                 required="required"
