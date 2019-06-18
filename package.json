@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/maledr5/fiduamericas/issues"
   },
-  "homepage": "https://github.com/maledr5/fiduamericas#readme",
+  "homepage": "./",
   "dependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
@@ -31,7 +31,6 @@
     "debug": "^4.1.1",
     "eslint": "^5.16.0",
     "file-loader": "^4.0.0",
-    "history": "^4.9.0",
     "jquery": "^3.4.1",
     "lodash": "^4.17.11",
     "react": "^16.8.6",

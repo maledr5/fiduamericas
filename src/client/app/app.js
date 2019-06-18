@@ -1,7 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route } from 'react-router-dom'
-import { createBrowserHistory } from 'history';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import ScrollToTop from './ScrollToTop';
 
 import Header from './components/Header';
@@ -15,15 +13,12 @@ import Fondos from './pages/Fondos';
 import FondoFit from './pages/FondoFit';
 import Faq from './pages/Faq';
 import Contacto from './pages/Contacto';
-import Resoluciones from './pages/Resoluciones';
 import MarcoLegal from './pages/MarcoLegal';
 import ResolucionesGoogleApi from './pages/ResolucionesGoogleApi.js';
 
-const customHistory = createBrowserHistory()
-
 const App = () =>
 
-    <Router history={customHistory}>
+    <Router>
         <ScrollToTop>
         <div className="app">
             <Header />
