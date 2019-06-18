@@ -56,13 +56,13 @@ class ContactoForm extends React.Component {
     }
 
     calcularRetornoMensual(incremento, permanencia, tasaFondo) {
-        var tiempoRestatne = permanencia - this.PERIODO_EN_DIAS
+        var tiempoRestante = permanencia - this.PERIODO_EN_DIAS
         var totalretornoMensual = 0
         do {
-          var retornoMensual = incremento * tasaFondo * tiempoRestatne / this.ANIO_EN_DIAS
+          var retornoMensual = incremento * tasaFondo * tiempoRestante / this.ANIO_EN_DIAS
           totalretornoMensual += retornoMensual
-          tiempoRestatne = tiempoRestatne - this.PERIODO_EN_DIAS
-        } while (tiempoRestatne > 0)
+          tiempoRestante = tiempoRestante - this.PERIODO_EN_DIAS
+        } while (tiempoRestante > 0)
         return totalretornoMensual
     }
 
@@ -76,11 +76,17 @@ class ContactoForm extends React.Component {
         this.actualizarValoresEnPantalla("", "")
     }
 
+    mesesDePermanencia(permanencia) {
+        const mesesDePermanencia = Math.floor(permanencia / this.PERIODO_EN_DIAS)
+        const mod = permanencia % this.PERIODO_EN_DIAS
+        return mod > 0 ? mesesDePermanencia : mesesDePermanencia - 1
+    }
+
     mostrarResultados(montoInicial, permanencia, incrementoMensual) {
         const retornoMensual = this.calcularRetornoMensual(incrementoMensual, permanencia, this.TASA_FONDO_FIT)
         const retornoAnualDeMontoInicial = montoInicial * this.TASA_FONDO_FIT * permanencia / this.ANIO_EN_DIAS
 
-        const mesesDePermanencia = Math.floor(permanencia / this.PERIODO_EN_DIAS)
+        const mesesDePermanencia = this.mesesDePermanencia(permanencia)
 
         const totalARecibir = parseFloat(montoInicial) +
         parseFloat(incrementoMensual * mesesDePermanencia) +
@@ -185,8 +191,8 @@ class ContactoForm extends React.Component {
                             />
                         </div>
                     </div>
-                    <h2 className="text-main">Valor a recibir: {totalRecibir} </h2>
-                    <h4>Rendimiento obtenido en el Fondo Fit: {rendimientoFondo}</h4>
+                    <h2 className="text-main">Valor total a recibir: {totalRecibir} </h2>
+                    <h4>Rendimiento total obtenido en el Fondo Fit: {rendimientoFondo}</h4>
                     {/* <h4>Rendimiento que obtendrías en un banco: {rendimeintoBanco}</h4> */}
                 </form>
         )
