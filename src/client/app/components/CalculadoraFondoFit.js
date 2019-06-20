@@ -1,12 +1,13 @@
 import React from 'react';
 
 import CalculadoraFondos from './CalculadoraFondos'
+import fondoFitBrand from '../images/brand_fondo_fit_icon.svg'
 
 const CalculadoraFondoFit = () => {
     return (
         <div className="container">
-            <div className="row">
-                <h2 className="text-main left">Calculadora Fondo Fit</h2>
+            <div className="row brand">
+                <img src={fondoFitBrand} /><h2 className="text-main left">Calculadora Fondo Fit</h2>
             </div>
             <hr/>
             <div className="row">
@@ -19,8 +20,8 @@ const CalculadoraFondoFit = () => {
                     <div id="caracteristicas" className="row">
 						<div className="col s12 l8">
                             <hr/>
-                            <p className="second text-dark">Tasa de Rendimiento Total Proyectada
-							<span className="hightlight-sec text-main">5.35%</span></p>
+                            <p className="second text-dark">Tasa de rendimiento total proyectada
+							<span className="hightlight-sec text-main">6.00%</span></p>
 							<hr/>
                             <p className="second text-dark">Plazo mínimo <br/> en días
 							<span className="hightlight-sec text-main">90</span></p>
@@ -28,7 +29,7 @@ const CalculadoraFondoFit = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col s12 m6 offset-m1">
+                <div className="col s12 m7">
                     <CalculadoraFondos />
                 </div>
             </div>

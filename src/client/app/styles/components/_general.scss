@@ -57,6 +57,15 @@ textarea {
 	@include align-items(flex-end);
 }
 
+#calculadora-fondo-fit .brand {
+	@extend %flexbox;
+	@include align-items(flex-end);
+	img {
+		height: 60px;
+		margin-right: 20px;
+	}
+}
+
 .block-display {
 	display: block;
 }

@@ -53,3 +53,20 @@ footer .form-response {
 	}
 }
 
+#calculadora-fondo-fit {
+	select {
+		width: 100%;
+		padding: 0 20px;
+	}
+	.caret {
+		position: relative;
+		left: 70%;
+		top: -40px;
+		z-index: 0;
+		@media #{$medium-and-down} {
+			top: -40px;
+			left: 85%;
+		}
+	}
+}
+

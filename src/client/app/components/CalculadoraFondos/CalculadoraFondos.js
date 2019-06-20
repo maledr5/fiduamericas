@@ -8,17 +8,25 @@ class ContactoForm extends React.Component {
         id: {
             montoInicial: "montoInicial",
             permanencia: "permanencia",
+            tipoDePermanencia: "tipoDePermanencia",
             incrementoMensual: "incrementoMensual"
         },
         nombre: {
             montoInicial: "Monto inicial",
-            permanencia: "Dias de permanencia",
+            permanencia: "Permanencia",
+            tipoDePermanencia: "Periodo",
             incrementoMensual: "Incremento Mensual",
             calcularRendimiento: "Calcular Rendimiento"
         }
     }
 
-    TASA_FONDO_FIT = 0.0535
+    PERMANENCIA = {
+        dias: 1,
+        meses: 30,
+        anios: 360
+    }
+
+    TASA_FONDO_FIT = 0.060
     PERIODO_EN_DIAS = 30
     ANIO_EN_DIAS = 360
     MINIMO_PERMANENCIA = 90
@@ -37,7 +45,8 @@ class ContactoForm extends React.Component {
             totalRecibir: "",
             rendimientoFondo: "",
             rendimientoBanco: "",
-            error: ""
+            error: "",
+            tipoDePermanencia: "dias"
 		}
     }
 
@@ -82,11 +91,15 @@ class ContactoForm extends React.Component {
         return mod > 0 ? mesesDePermanencia : mesesDePermanencia - 1
     }
 
-    mostrarResultados(montoInicial, permanencia, incrementoMensual) {
-        const retornoMensual = this.calcularRetornoMensual(incrementoMensual, permanencia, this.TASA_FONDO_FIT)
-        const retornoAnualDeMontoInicial = montoInicial * this.TASA_FONDO_FIT * permanencia / this.ANIO_EN_DIAS
+    obtenerPermanenciaEnDias(permanencia, tipoDePermanencia) {
+        return permanencia * this.PERMANENCIA[tipoDePermanencia]
+    }
 
-        const mesesDePermanencia = this.mesesDePermanencia(permanencia)
+    mostrarResultados(montoInicial, permanenciaEnDias, incrementoMensual) {
+        const retornoMensual = this.calcularRetornoMensual(incrementoMensual, permanenciaEnDias, this.TASA_FONDO_FIT)
+        const retornoAnualDeMontoInicial = montoInicial * this.TASA_FONDO_FIT * permanenciaEnDias / this.ANIO_EN_DIAS
+
+        const mesesDePermanencia = this.mesesDePermanencia(permanenciaEnDias)
 
         const totalARecibir = parseFloat(montoInicial) +
         parseFloat(incrementoMensual * mesesDePermanencia) +
@@ -95,7 +108,7 @@ class ContactoForm extends React.Component {
 
         const retornoTotal = retornoMensual + retornoAnualDeMontoInicial
 
-        this.actualizarValoresEnPantalla(round(totalARecibir), round(retornoTotal))
+        this.actualizarValoresEnPantalla('$' + round(totalARecibir), '$' + round(retornoTotal))
     }
 
     esTiempoPermanenciaMinimo(permanencia) {
@@ -127,23 +140,24 @@ class ContactoForm extends React.Component {
 
     calculate(event) {
         event.preventDefault()
-        const {montoInicial, permanencia, incrementoMensual} = this.state
+        const {montoInicial, permanencia, incrementoMensual, tipoDePermanencia} = this.state
         this.limpiarTotalesEnPantalla()
-        if(this.esElInputValido(montoInicial, permanencia, incrementoMensual)){
+        const permanenciaEnDias = this.obtenerPermanenciaEnDias(permanencia, tipoDePermanencia)
+        if(this.esElInputValido(montoInicial, permanenciaEnDias, incrementoMensual)){
             this.setErrorState("")
-            this.mostrarResultados(montoInicial, permanencia, incrementoMensual)
+            this.mostrarResultados(montoInicial, permanenciaEnDias, incrementoMensual, tipoDePermanencia)
         }
     }
 
     render() {
-        const {montoInicial, permanencia, incrementoMensual, error, totalRecibir, rendimientoFondo, rendimeintoBanco} = this.state
+        const {montoInicial, permanencia, incrementoMensual, error, totalRecibir, rendimientoFondo, tipoDePermanencia} = this.state
         return (
-                <form>
+                <form className="container">
                     <div className="row">
                         <div className="col error-notification">{error}</div>
                     </div>
                     <div className="row">
-                        <div className="col s12 l6">
+                        <div className="col s12 l5">
                             <label htmlFor={this.CONSTANT.id.montoInicial}>{this.CONSTANT.nombre.montoInicial}</label>
                             <input
                                 className="input-main"
@@ -155,7 +169,7 @@ class ContactoForm extends React.Component {
                                 required="required"
                             />
                         </div>
-                        <div className="col s12 l6">
+                        <div className="col s12 l4">
                             <label htmlFor={this.CONSTANT.id.permanencia}>{this.CONSTANT.nombre.permanencia}</label>
                             <input
                                 className="input-main"
@@ -167,10 +181,22 @@ class ContactoForm extends React.Component {
                                 required="required"
                             />
                         </div>
+                        <div className="col s12 l3">
+                            <label htmlFor={this.CONSTANT.id.tipoDePermanencia}> {this.CONSTANT.nombre.tipoDePermanencia} </label>
+                            <select id={this.CONSTANT.id.tipoDePermanencia}
+                                    value={tipoDePermanencia}
+                                    onChange={event => this.updateValueFromEvent(event)}
+                                    name={this.CONSTANT.id.tipoDePermanencia}>
+                                <option value="dias">Dias</option>
+                                <option value="meses">Meses</option>
+                                <option value="anios">Años</option>
+                            </select>
+                            <span className="caret caret-down"></span>
+                        </div>
                     </div>
                     <div className="row flex-display flex-align-end">
                         <div className="col s12 l6">
-                            <label htmlFor={this.CONSTANT.id.incrementoMensual}>{this.CONSTANT.nombre.incrementoMensual}</label>
+                            <label htmlFor={this.CONSTANT.id.permanencia}>{this.CONSTANT.nombre.incrementoMensual}</label>
                             <input
                                 className="input-main"
                                 type="number"
@@ -191,8 +217,8 @@ class ContactoForm extends React.Component {
                             />
                         </div>
                     </div>
-                    <h2 className="text-main">Valor total a recibir: {totalRecibir} </h2>
-                    <h4>Rendimiento total obtenido en el Fondo Fit: {rendimientoFondo}</h4>
+                    <h3 className="text-main">Valor proyectado a recibir: {totalRecibir} </h3>
+                    <p>Rendimiento proyectado en el Fondo Fit: {rendimientoFondo}</p>
                     {/* <h4>Rendimiento que obtendrías en un banco: {rendimeintoBanco}</h4> */}
                 </form>
         )
