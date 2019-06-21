@@ -1,23 +1,25 @@
 import React from 'react';
 
-const Folder = React.Component({
-
-	getInitialState() {
-		return { showAnswer: false };
-	},
+class Folder extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			showAnswer: false
+		};
+	}
 
 	show() {
 		this.setState({ showAnswer: false });
-	},
+	}
 
 	hide() {
 		this.setState({ showAnswer: true });
-	},
+	}
 
 	toggleState() {
         const currentState = this.state.showAnswer;
         this.setState({ showAnswer: !currentState });
-    },
+    }
 
   	fileElements() {
   		var files = this.props.folderContent;
@@ -32,7 +34,7 @@ const Folder = React.Component({
   		});
 
 		return fileElements;
-  	},
+  	}
 
 	render() {
 		console.log("PROPS: ", this.props);
@@ -52,6 +54,6 @@ const Folder = React.Component({
 			</div>
 		)
 	}
-});
+}
 
 export default Folder
