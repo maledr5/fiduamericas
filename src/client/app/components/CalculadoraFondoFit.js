@@ -20,10 +20,10 @@ const CalculadoraFondoFit = () => {
                     <div id="caracteristicas" className="row">
 						<div className="col s12 l8">
                             <hr/>
-                            <p className="second text-dark">Tasa de rendimiento total proyectada
+                            <p className="second text-dark">Tasa de rendimiento anual proyectada
 							<span className="hightlight-sec text-main">6.00%</span></p>
 							<hr/>
-                            <p className="second text-dark">Plazo mínimo <br/> en días
+                            <p className="second text-dark">Permanencia mínima <br/> en días
 							<span className="hightlight-sec text-main">90</span></p>
                             <hr/>
                         </div>
