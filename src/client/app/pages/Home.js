@@ -25,7 +25,7 @@ const Home = () => {
 				</div>
 			</div>
 
-			<div id="calculadora-fondo-fit">
+			<div id="calculadora-fondo-fit" className="container">
 				<CalculadoraFondoFit />
 			</div>
 

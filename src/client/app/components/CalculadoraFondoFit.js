@@ -5,7 +5,7 @@ import fondoFitBrand from '../images/brand_fondo_fit_icon.svg'
 
 const CalculadoraFondoFit = () => {
     return (
-        <div className="container">
+        <div>
             <div className="row brand">
                 <img src={fondoFitBrand} /><h2 className="text-main left">Calculadora Fondo Fit</h2>
             </div>

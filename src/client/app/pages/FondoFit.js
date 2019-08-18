@@ -3,6 +3,7 @@ import { HashLink } from 'react-router-hash-link';
 import { NavLink as Link } from 'react-router-dom';
 
 import FondofitCta from '../components/FondofitCta.js'
+import CalculadoraFondoFit from '../components/CalculadoraFondoFit'
 
 import presentacion from '../data/downloads/fondofit_presentacion.pdf'
 import reglamento from '../data/downloads/fondofit_reglamento.pdf'
@@ -58,6 +59,12 @@ const FondoFit = () => {
 					<span className="col l4 m6 s10 offset-s2 offset-m4 offset-l4 border-box box-main">
 						<Link to={"/contacto?product=fondofit"} className="main-link">Quiero Invertir</Link>
 					</span>
+				</div>
+
+				<br/><br/>
+
+				<div id="calculadora-fondo-fit">
+					<CalculadoraFondoFit />
 				</div>
 
 				<br/><br/>
