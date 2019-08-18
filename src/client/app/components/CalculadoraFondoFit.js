@@ -13,7 +13,9 @@ const CalculadoraFondoFit = () => {
             <div className="row">
                 <div className="col s12 m5 text-main left">
                     <p className="normal text-dark">
-                        El Fondo Fit de inversión te permite tener un rendimiento a corto plazo. Para abrir un fondo necesitas un monto inicial y realizar incrementos mensuales desde $10. 
+                        El Fondo Fit de inversión te permite tener un rendimiento a corto plazo.
+                        Para abrir un fondo solo necesitas un monto inicial, con la capacidad de
+                        realizar incrementos mensuales desde $10.
                         <br/><br/>
                         Esta calculadora te ayudará a evaluar tu rendimiento.
                     </p>

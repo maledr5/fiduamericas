@@ -30,7 +30,7 @@ class ContactoForm extends React.Component {
     PERIODO_EN_DIAS = 30
     ANIO_EN_DIAS = 360
     MINIMO_PERMANENCIA = 90
-    MINIMO_INCREMENTO = 10
+    MINIMO_INCREMENTO = 0
 
     ERROR_INSERTE_VALORES = "Debe ingresar todos los campos antes de calcular"
     ERROR_PERMANENCIA_MINIMA = `El tiempo mínimo de permanencia es de ${this.MINIMO_PERMANENCIA} dias`
@@ -40,8 +40,8 @@ class ContactoForm extends React.Component {
 		super(props)
 		this.state = {
             montoInicial: "",
-            permanencia: 90,
-            incrementoMensual: 10,
+            permanencia: this.MINIMO_PERMANENCIA,
+            incrementoMensual: this.MINIMO_INCREMENTO,
             totalRecibir: "",
             rendimientoFondo: "",
             rendimientoBanco: "",
@@ -120,7 +120,7 @@ class ContactoForm extends React.Component {
     }
 
     esElInputValido(montoInicial, permanencia, incrementoMensual) {
-        if(!areValuesInserted([montoInicial, permanencia, incrementoMensual])) {
+        if(!areValuesInserted([montoInicial, permanencia])) {
             this.setErrorState(this.ERROR_INSERTE_VALORES)
             return false
         }
